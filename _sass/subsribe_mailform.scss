@@ -1,0 +1,753 @@
+/*========================================================
+                      Contact Form
+=========================================================*/
+.subsribe_mailform {
+  margin-top: -17px;
+  /* MF
+  ========================================================*/
+  /* Mail Form PlaceHolder
+  ========================================================*/
+  /* Mail Form Validation
+    ========================================================*/
+  /* MF Controls
+  ========================================================*/
+  /* Mail Form Submit
+  ========================================================*/
+}
+.subsribe_mailform .mailform {
+  position: relative;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+}
+.subsribe_mailform .mailform fieldset {
+  border: none;
+}
+.subsribe_mailform .mailform * {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.subsribe_mailform .mailform label {
+  position: relative;
+  display: block;
+  /*width: 100%;*/
+  /*margin-top: $input-offset-top;*/
+}
+.subsribe_mailform .mailform label:first-child {
+  /*margin-top: 0;*/
+}
+.subsribe_mailform .mailform label input, .subsribe_mailform .mailform label select, .subsribe_mailform .mailform label textarea {
+  text-transform: uppercase;
+  display: block;
+  width: 100%;
+  margin: 0;
+  -webkit-appearance: none;
+  outline: none;
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  padding: 29px 15px 29px 43px;
+  line-height: 1.2;
+  color: #fff;
+  background: transperent;
+  border: 3px solid #fff;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+}
+@media (max-width: 479px) {
+  .subsribe_mailform .mailform label input, .subsribe_mailform .mailform label select, .subsribe_mailform .mailform label textarea {
+    /*padding: 29px 20px;*/
+  }
+}
+.subsribe_mailform .mailform label input:-moz-placeholder, .subsribe_mailform .mailform label select:-moz-placeholder, .subsribe_mailform .mailform label textarea:-moz-placeholder {
+  color: #fff;
+  opacity: 1;
+}
+.subsribe_mailform .mailform label input::-webkit-input-placeholder, .subsribe_mailform .mailform label select::-webkit-input-placeholder, .subsribe_mailform .mailform label textarea::-webkit-input-placeholder {
+  color: #fff;
+  opacity: 1;
+}
+.subsribe_mailform .mailform label input::-moz-placeholder, .subsribe_mailform .mailform label select::-moz-placeholder, .subsribe_mailform .mailform label textarea::-moz-placeholder {
+  color: #fff;
+  opacity: 1;
+}
+.subsribe_mailform .mailform label input:-ms-input-placeholder, .subsribe_mailform .mailform label select:-ms-input-placeholder, .subsribe_mailform .mailform label textarea:-ms-input-placeholder {
+  color: #fff;
+  opacity: 1;
+}
+.subsribe_mailform .mailform label textarea {
+  resize: vertical;
+  overflow: auto;
+  height: 317px;
+}
+@media (max-width: 1365px) {
+  .subsribe_mailform .mailform label {
+    /*margin-top: 30px;*/
+  }
+}
+@-ms-keyframes fout {
+  0% {
+    transform: scale(1) translateX(0);
+  }
+  100% {
+    transform: scale(0) translateX(0);
+  }
+}
+@-o-keyframes fout {
+  0% {
+    transform: scale(1) translateX(0);
+  }
+  100% {
+    transform: scale(0) translateX(0);
+  }
+}
+@-webkit-keyframes fout {
+  0% {
+    transform: scale(1) translateX(0);
+  }
+  100% {
+    transform: scale(0) translateX(0);
+  }
+}
+@-moz-keyframes fout {
+  0% {
+    transform: scale(1) translateX(0);
+  }
+  100% {
+    transform: scale(0) translateX(0);
+  }
+}
+@keyframes fout {
+  0% {
+    transform: scale(1) translateX(0);
+  }
+  100% {
+    transform: scale(0) translateX(0);
+  }
+}
+.subsribe_mailform .mfPlaceHolder {
+  font: inherit;
+  cursor: text;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 29px 15px 29px 43px;
+  line-height: 1.2;
+  color: #fff;
+  opacity: 1;
+  -moz-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+*:-webkit-autofill ~ .subsribe_mailform .mfPlaceHolder {
+  opacity: .4;
+  -moz-transform: translateY(-30%);
+  -ms-transform: translateY(-30%);
+  -o-transform: translateY(-30%);
+  -webkit-transform: translateY(-30%);
+  transform: translateY(-30%);
+}
+.subsribe_mailform .mfPlaceHolder.state-1 {
+  font-size: 12px;
+  opacity: .4;
+  -moz-transform: translateY(-30%);
+  -ms-transform: translateY(-30%);
+  -o-transform: translateY(-30%);
+  -webkit-transform: translateY(-30%);
+  transform: translateY(-30%);
+}
+.subsribe_mailform .mfValidation {
+  -moz-transform-origin: 0% 50%;
+  -ms-transform-origin: 0% 50%;
+  -o-transform-origin: 0% 50%;
+  -webkit-transform-origin: 0% 50%;
+  transform-origin: 0% 50%;
+  -moz-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  -webkit-animation: notifanim-fo 0.4s cubic-bezier(0.55, 0, 0.1, 1) forwards;
+  -moz-animation: notifanim-fo 0.4s cubic-bezier(0.55, 0, 0.1, 1) forwards;
+  -ms-animation: notifanim-fo 0.4s cubic-bezier(0.55, 0, 0.1, 1) forwards;
+  -o-animation: notifanim-fo 0.4s cubic-bezier(0.55, 0, 0.1, 1) forwards;
+  animation: notifanim-fo 0.4s cubic-bezier(0.55, 0, 0.1, 1) forwards;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  position: absolute;
+  top: 5px;
+  left: auto;
+  left: 20px;
+  width: 200px;
+  margin-top: -5px;
+  margin-left: 10px;
+  padding: 5px;
+  height: 30px;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 20px;
+  color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  cursor: pointer;
+  z-index: 998;
+  background: none;
+}
+.subsribe_mailform .mfValidation:hover {
+  /*background: lighten(saturate(adjust_hue(map-get($scheme, default), 0), 0%), 77.64705882352942%);*/
+}
+.subsribe_mailform .mfValidation:before {
+  content: '';
+  position: absolute;
+  right: 50%;
+  top: 100%;
+  margin-top: 4px;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  /*@include triangle(bottom, 10px, 8px, lighten(saturate(adjust_hue(map-get($scheme, default), 0), 3.9999999999999822%), 80.98039215686273%));*/
+  -moz-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+.subsribe_mailform .mfValidation.error {
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+  visibility: visible;
+  -webkit-animation: notifanim 0.4s cubic-bezier(0.55, 0, 0.1, 1) forwards;
+  -moz-animation: notifanim 0.4s cubic-bezier(0.55, 0, 0.1, 1) forwards;
+  -ms-animation: notifanim 0.4s cubic-bezier(0.55, 0, 0.1, 1) forwards;
+  -o-animation: notifanim 0.4s cubic-bezier(0.55, 0, 0.1, 1) forwards;
+  animation: notifanim 0.4s cubic-bezier(0.55, 0, 0.1, 1) forwards;
+}
+@media (max-width: 767px) {
+  .subsribe_mailform .mfValidation {
+    text-align: right;
+    top: auto;
+    left: auto;
+    top: -19px;
+    right: 35px;
+    background: none;
+    padding: 0;
+    margin: 0 0 3px;
+    min-height: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+  .subsribe_mailform .mfValidation:before {
+    display: none;
+  }
+  .subsribe_mailform .mfValidation:hover {
+    background: none;
+    right: 40px;
+  }
+}
+@-ms-keyframes notifanim-fo {
+  0% {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+  }
+  20% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  99% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: hidden;
+    transform: scale(0.3);
+    opacity: 0;
+  }
+}
+@-o-keyframes notifanim-fo {
+  0% {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+  }
+  20% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  99% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: hidden;
+    transform: scale(0.3);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes notifanim-fo {
+  0% {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+  }
+  20% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  99% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: hidden;
+    transform: scale(0.3);
+    opacity: 0;
+  }
+}
+@-moz-keyframes notifanim-fo {
+  0% {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+  }
+  20% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  99% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: hidden;
+    transform: scale(0.3);
+    opacity: 0;
+  }
+}
+@keyframes notifanim-fo {
+  0% {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+  }
+  20% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  99% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: hidden;
+    transform: scale(0.3);
+    opacity: 0;
+  }
+}
+@-ms-keyframes notifanim {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.3);
+  }
+  1% {
+    visibility: visible;
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@-o-keyframes notifanim {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.3);
+  }
+  1% {
+    visibility: visible;
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes notifanim {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.3);
+  }
+  1% {
+    visibility: visible;
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@-moz-keyframes notifanim {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.3);
+  }
+  1% {
+    visibility: visible;
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes notifanim {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.3);
+  }
+  1% {
+    visibility: visible;
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.subsribe_mailform .mfControls {
+  /*margin-top: 48px;*/
+  word-spacing: 10px;
+  text-align: center;
+  text-align: left;
+}
+@media (max-width: 767px) {
+  .subsribe_mailform .mfControls {
+    text-align: center;
+  }
+}
+.subsribe_mailform .mfControls .btn {
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  height: 79px;
+  padding: 28px 42px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  -moz-transition: 0.4s;
+  -o-transition: 0.4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.subsribe_mailform .mfControls > * {
+  display: inline-block;
+  word-spacing: normal;
+  /*float: left;*/
+}
+.subsribe_mailform .mfProgress {
+  position: relative;
+}
+.subsribe_mailform .mfProgress .cnt, .subsribe_mailform .mfProgress .loader {
+  -moz-transition: 0.4s all ease-in-out;
+  -o-transition: 0.4s all ease-in-out;
+  -webkit-transition: 0.4s all ease-in-out;
+  transition: 0.4s all ease-in-out;
+}
+.subsribe_mailform .mfProgress .loader {
+  opacity: 0;
+  text-align: center;
+  letter-spacing: 10px;
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+.subsribe_mailform .mfProgress .loader, .subsribe_mailform .mfProgress .loader:before, .subsribe_mailform .mfProgress .loader:after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  margin: auto;
+}
+.subsribe_mailform .mfProgress .loader:before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+.subsribe_mailform .mfProgress .loader:after {
+  content: '';
+  width: 30px;
+  height: 30px;
+  color: white;
+  font: 400 30px "FontAwesome";
+  line-height: inherit;
+  -moz-transition: 0.4s all ease-in-out;
+  -o-transition: 0.4s all ease-in-out;
+  -webkit-transition: 0.4s all ease-in-out;
+  transition: 0.4s all ease-in-out;
+  -moz-transform: scale(0) rotate(-60deg);
+  -ms-transform: scale(0) rotate(-60deg);
+  -o-transform: scale(0) rotate(-60deg);
+  -webkit-transform: scale(0) rotate(-60deg);
+  transform: scale(0) rotate(-60deg);
+}
+.subsribe_mailform .mfProgress.sending .cnt, .subsribe_mailform .mfProgress.fail .cnt, .subsribe_mailform .mfProgress.success .cnt {
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+.lt-ie9 .subsribe_mailform .mfProgress.sending .cnt, .lt-ie9 .subsribe_mailform .mfProgress.fail .cnt, .lt-ie9 .subsribe_mailform .mfProgress.success .cnt {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=1)";
+  filter: alpha(opacity=100);
+}
+.subsribe_mailform .mfProgress.sending .loader, .subsribe_mailform .mfProgress.fail .loader, .subsribe_mailform .mfProgress.success .loader {
+  opacity: 0;
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.lt-ie9 .subsribe_mailform .mfProgress.sending .loader, .lt-ie9 .subsribe_mailform .mfProgress.fail .loader, .lt-ie9 .subsribe_mailform .mfProgress.success .loader {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+}
+.subsribe_mailform .mfProgress.fail .loader:before, .subsribe_mailform .mfProgress.success .loader:before {
+  -webkit-animation: fout 0.4s ease-in-out 1 forwards;
+  -moz-animation: fout 0.4s ease-in-out 1 forwards;
+  -ms-animation: fout 0.4s ease-in-out 1 forwards;
+  -o-animation: fout 0.4s ease-in-out 1 forwards;
+  animation: fout 0.4s ease-in-out 1 forwards;
+}
+.subsribe_mailform .mfProgress.fail .loader:after, .subsribe_mailform .mfProgress.success .loader:after {
+  -moz-transform: scale(1) rotate(0deg);
+  -ms-transform: scale(1) rotate(0deg);
+  -o-transform: scale(1) rotate(0deg);
+  -webkit-transform: scale(1) rotate(0deg);
+  transform: scale(1) rotate(0deg);
+}
+.subsribe_mailform .mfProgress.sending .loader:before {
+  -webkit-animation: motion 3s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+  -moz-animation: motion 3s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+  -ms-animation: motion 3s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+  -o-animation: motion 3s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+  animation: motion 3s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+}
+.subsribe_mailform .mfProgress.fail .loader:after {
+  content: '\f06a';
+}
+.subsribe_mailform .mfProgress.success .loader:after {
+  content: '\f058';
+}
+.subsribe_mailform .mfProgress .msg {
+  -moz-transform-origin: 0% 50%;
+  -ms-transform-origin: 0% 50%;
+  -o-transform-origin: 0% 50%;
+  -webkit-transform-origin: 0% 50%;
+  transform-origin: 0% 50%;
+  -moz-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  -webkit-animation: notifanim-fo 0.4s ease-in-out forwards;
+  -moz-animation: notifanim-fo 0.4s ease-in-out forwards;
+  -ms-animation: notifanim-fo 0.4s ease-in-out forwards;
+  -o-animation: notifanim-fo 0.4s ease-in-out forwards;
+  animation: notifanim-fo 0.4s ease-in-out forwards;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5);
+  position: absolute;
+  padding: 10px;
+  border-radius: 30px;
+  font-size: 14px;
+  line-height: 20px;
+  opacity: 0;
+  visibility: hidden;
+  top: 100%;
+  left: 50%;
+  width: 160px;
+  margin-left: -80px;
+  margin-top: 20px;
+  -moz-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  -o-transform-origin: 50% 100%;
+  -webkit-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  background: #111;
+  color: #fff;
+}
+.subsribe_mailform .mfProgress .msg:before {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  right: 50%;
+  transform: translate(50%, 0%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 6px 6px 6px;
+  border-color: transparent transparent #111 transparent;
+  -moz-transition: 0.4s all ease-in-out;
+  -o-transition: 0.4s all ease-in-out;
+  -webkit-transition: 0.4s all ease-in-out;
+  transition: 0.4s all ease-in-out;
+}
+.subsribe_mailform .mfProgress.fail .msg, .subsribe_mailform .mfProgress.success .msg {
+  transform: scale(1);
+  opacity: 1;
+  visibility: visible;
+  -webkit-animation: notifanim 0.4s ease-in-out forwards;
+  -moz-animation: notifanim 0.4s ease-in-out forwards;
+  -ms-animation: notifanim 0.4s ease-in-out forwards;
+  -o-animation: notifanim 0.4s ease-in-out forwards;
+  animation: notifanim 0.4s ease-in-out forwards;
+}
+.subsribe_mailform .mfProgress.fail .msg {
+  background: #F44336;
+}
+.subsribe_mailform .mfProgress.fail .msg:before {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 6px 6px 6px;
+  border-color: transparent transparent #F44336 transparent;
+}
+.subsribe_mailform .mfProgress.success .msg {
+  background: #2E7D32;
+}
+.subsribe_mailform .mfProgress.success .msg:before {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 6px 6px 6px;
+  border-color: transparent transparent #2E7D32 transparent;
+}
+@-ms-keyframes motion {
+  0% {
+    transform: translateX(0) scale(1);
+  }
+  25% {
+    transform: translateX(-50px) scale(0.3);
+  }
+  50% {
+    transform: translateX(0) scale(1);
+  }
+  75% {
+    transform: translateX(50px) scale(0.3);
+  }
+  100% {
+    transform: translateX(0) scale(1);
+  }
+}
+@-o-keyframes motion {
+  0% {
+    transform: translateX(0) scale(1);
+  }
+  25% {
+    transform: translateX(-50px) scale(0.3);
+  }
+  50% {
+    transform: translateX(0) scale(1);
+  }
+  75% {
+    transform: translateX(50px) scale(0.3);
+  }
+  100% {
+    transform: translateX(0) scale(1);
+  }
+}
+@-webkit-keyframes motion {
+  0% {
+    transform: translateX(0) scale(1);
+  }
+  25% {
+    transform: translateX(-50px) scale(0.3);
+  }
+  50% {
+    transform: translateX(0) scale(1);
+  }
+  75% {
+    transform: translateX(50px) scale(0.3);
+  }
+  100% {
+    transform: translateX(0) scale(1);
+  }
+}
+@-moz-keyframes motion {
+  0% {
+    transform: translateX(0) scale(1);
+  }
+  25% {
+    transform: translateX(-50px) scale(0.3);
+  }
+  50% {
+    transform: translateX(0) scale(1);
+  }
+  75% {
+    transform: translateX(50px) scale(0.3);
+  }
+  100% {
+    transform: translateX(0) scale(1);
+  }
+}
+@keyframes motion {
+  0% {
+    transform: translateX(0) scale(1);
+  }
+  25% {
+    transform: translateX(-50px) scale(0.3);
+  }
+  50% {
+    transform: translateX(0) scale(1);
+  }
+  75% {
+    transform: translateX(50px) scale(0.3);
+  }
+  100% {
+    transform: translateX(0) scale(1);
+  }
+}

@@ -1,0 +1,11 @@
+# Site settings
+title: Sieci urządzeń mobilnych - PJATK
+description: > # this means to ignore newlines until "baseurl:"
+  Sieci urządzeń mobilnych to specjalizacja przy Polsko-Japońskiej Akademii
+  Technik Komputerowych. Studenci specjalizacji mają okazję poznać nowe
+  technologie w dziedzinie platform mobilnych - Android, iOS i Windows Phone.
+url: "http://PJATK-SUM.github.io"
+github_username: PJATK-SUM
+
+# Build settings
+markdown: kramdown
