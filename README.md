@@ -1,6 +1,6 @@
 # Misja strony SUM
 
-Strona internetowa specjalizacji Sieci Urządzeń Mobilnych zawiera podstawowe
+[Strona internetowa specjalizacji Sieci Urządzeń Mobilnych](http://pjatk-sum.github.io/) zawiera podstawowe
 informacje o naszej specializacji - czym się zajmujemy, jakich technologii się
 uczymy, jakimi urządzeniami dysponujemy, itd.
 
