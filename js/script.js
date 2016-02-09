@@ -7,7 +7,10 @@ function isIE() {
     return (myNav.indexOf('msie') != -1) ? parseInt(myNav.split('msie')[1]) : false;
 };
 
+/* jQuery UI
+ ========================================================*/
 
+include('https://code.jquery.com/ui/1.11.2/jquery-ui.min.js');
 
 /* Nicescroll
  ========================================================*/
