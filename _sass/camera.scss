@@ -1,3 +1,5 @@
+@import "_mixins.scss";
+
 /*========================================================
                         Camera
 =========================================================*/
@@ -94,9 +96,9 @@
 }
 
 .camera_loader {
+  @include border-radius(18px);
   background: #fff url(../images/camera-loader.gif) no-repeat center;
   border: 1px solid #ffffff;
-  border-radius: 18px;
   height: 36px;
   left: 50%;
   overflow: hidden;
@@ -193,11 +195,9 @@
   height: 100%;
 }
 .camera_caption .container {
+  @include border-box();
   color: #fff;
   text-align: center;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
 }
 .camera_caption .container h2 {
   color: #fff;
@@ -245,23 +245,19 @@
   text-align: center;
 }
 .camera_pag_ul li {
+  @include border-radius(50%);
+  @include border-box();
   display: inline-block;
   width: 34px;
   height: 34px;
   line-height: 34px;
   text-align: center;
   cursor: pointer;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
   background: none;
   -moz-transition: 0.3s all ease;
   -o-transition: 0.3s all ease;
   -webkit-transition: 0.3s all ease;
   transition: 0.3s all ease;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
   border: 5px solid #fff;
 }
 .camera_pag_ul li.cameracurrent, .camera_pag_ul li:hover {

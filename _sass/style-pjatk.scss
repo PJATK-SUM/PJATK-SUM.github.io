@@ -1,3 +1,4 @@
+@import "_mixins.scss";
 
 /* camera.scss
 =========================================================*/
@@ -59,6 +60,8 @@
 /* Mail Form Validation
   ========================================================*/
 .mfValidation {
+    @include box-shadow(2px 2px 2px 0 rgba(0, 0, 0, 0.1));
+    @include border-radius(5px);
     -moz-transform-origin: 0% 50%;
     -ms-transform-origin: 0% 50%;
     -o-transform-origin: 0% 50%;
@@ -73,12 +76,6 @@
     -ms-animation: notifanim-fo 0.4s cubic-bezier(0.55, 0, 0.1, 1) forwards;
     -o-animation: notifanim-fo 0.4s cubic-bezier(0.55, 0, 0.1, 1) forwards;
     animation: notifanim-fo 0.4s cubic-bezier(0.55, 0, 0.1, 1) forwards;
-    -webkit-box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.1);
-    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.1);
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
     position: absolute;
     top: -10px;
     left: 20px;
@@ -133,6 +130,7 @@
 }
 @media (max-width: 767px) {
     .mfValidation {
+        @include box-shadow(none);
         text-align: right;
         top: auto;
         top: -18px;
@@ -143,9 +141,6 @@
         padding: 0;
         margin: 0 0 3px;
         min-height: 0;
-        -webkit-box-shadow: none;
-        -moz-box-shadow: none;
-        box-shadow: none;
     }
     .mfValidation:before {
         display: none;
@@ -486,6 +481,8 @@
 }
 
 .mfProgress .msg {
+    @include border-box();
+    @include box-shadow(2px 2px 2px 0 rgba(0, 0, 0, 0.5));
     -moz-transform-origin: 0% 50%;
     -ms-transform-origin: 0% 50%;
     -o-transform-origin: 0% 50%;
@@ -500,12 +497,6 @@
     -ms-animation: notifanim-fo 0.4s ease-in-out forwards;
     -o-animation: notifanim-fo 0.4s ease-in-out forwards;
     animation: notifanim-fo 0.4s ease-in-out forwards;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5);
-    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5);
     position: absolute;
     padding: 10px;
     border-radius: 27px;
@@ -982,6 +973,7 @@ footer .brand_name span {
     transform: translateY(-30%);
 }
 .subsribe_mailform .mfValidation {
+    @include box-shadow(none);
     -moz-transform-origin: 0% 50%;
     -ms-transform-origin: 0% 50%;
     -o-transform-origin: 0% 50%;
@@ -996,9 +988,6 @@ footer .brand_name span {
     -ms-animation: notifanim-fo 0.4s cubic-bezier(0.55, 0, 0.1, 1) forwards;
     -o-animation: notifanim-fo 0.4s cubic-bezier(0.55, 0, 0.1, 1) forwards;
     animation: notifanim-fo 0.4s cubic-bezier(0.55, 0, 0.1, 1) forwards;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
     position: absolute;
     top: 5px;
     left: auto;
@@ -1054,6 +1043,7 @@ footer .brand_name span {
 }
 @media (max-width: 767px) {
     .subsribe_mailform .mfValidation {
+        @include box-shadow(none);
         text-align: right;
         top: auto;
         left: auto;
@@ -1063,9 +1053,6 @@ footer .brand_name span {
         padding: 0;
         margin: 0 0 3px;
         min-height: 0;
-        -webkit-box-shadow: none;
-        -moz-box-shadow: none;
-        box-shadow: none;
     }
     .subsribe_mailform .mfValidation:before {
         display: none;
@@ -1282,9 +1269,7 @@ footer .brand_name span {
     }
 }
 .subsribe_mailform .mfControls .btn {
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    border-radius: 30px;
+    @include border-radius(30px);
     height: 79px;
     padding: 28px 42px;
     font-family: "Open Sans", sans-serif;
@@ -1403,6 +1388,9 @@ footer .brand_name span {
     content: '\f058';
 }
 .subsribe_mailform .mfProgress .msg {
+    @include border-box();
+    @include border-radius(30px);
+    @include box-shadow(2px 2px 2px 0 rgba(0, 0, 0, 0.5));
     -moz-transform-origin: 0% 50%;
     -ms-transform-origin: 0% 50%;
     -o-transform-origin: 0% 50%;
@@ -1417,15 +1405,8 @@ footer .brand_name span {
     -ms-animation: notifanim-fo 0.4s ease-in-out forwards;
     -o-animation: notifanim-fo 0.4s ease-in-out forwards;
     animation: notifanim-fo 0.4s ease-in-out forwards;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5);
-    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5);
     position: absolute;
     padding: 10px;
-    border-radius: 30px;
     font-size: 14px;
     line-height: 20px;
     opacity: 0;

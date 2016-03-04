@@ -1,3 +1,5 @@
+@import "_mixins.scss";
+
 /*========================================================
                       Contact Form
 =========================================================*/
@@ -24,9 +26,7 @@
   border: none;
 }
 .subsribe_mailform .mailform * {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+  @include border-box();
 }
 .subsribe_mailform .mailform label {
   position: relative;
@@ -38,6 +38,7 @@
   /*margin-top: 0;*/
 }
 .subsribe_mailform .mailform label input, .subsribe_mailform .mailform label select, .subsribe_mailform .mailform label textarea {
+  @include border-radius(30px);
   text-transform: uppercase;
   display: block;
   width: 100%;
@@ -51,9 +52,6 @@
   color: #fff;
   background: transperent;
   border: 3px solid #fff;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  border-radius: 30px;
 }
 @media (max-width: 479px) {
   .subsribe_mailform .mailform label input, .subsribe_mailform .mailform label select, .subsribe_mailform .mailform label textarea {
@@ -159,6 +157,7 @@
   transform: translateY(-30%);
 }
 .subsribe_mailform .mfValidation {
+  @include box-shadow(none);
   -moz-transform-origin: 0% 50%;
   -ms-transform-origin: 0% 50%;
   -o-transform-origin: 0% 50%;
@@ -173,9 +172,6 @@
   -ms-animation: notifanim-fo 0.4s cubic-bezier(0.55, 0, 0.1, 1) forwards;
   -o-animation: notifanim-fo 0.4s cubic-bezier(0.55, 0, 0.1, 1) forwards;
   animation: notifanim-fo 0.4s cubic-bezier(0.55, 0, 0.1, 1) forwards;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
   position: absolute;
   top: 5px;
   left: auto;
@@ -231,6 +227,7 @@
 }
 @media (max-width: 767px) {
   .subsribe_mailform .mfValidation {
+    @include box-shadow(none);
     text-align: right;
     top: auto;
     left: auto;
@@ -240,9 +237,6 @@
     padding: 0;
     margin: 0 0 3px;
     min-height: 0;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
   }
   .subsribe_mailform .mfValidation:before {
     display: none;
@@ -459,9 +453,7 @@
   }
 }
 .subsribe_mailform .mfControls .btn {
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  border-radius: 30px;
+  @include border-radius(30px);
   height: 79px;
   padding: 28px 42px;
   font-family: "Open Sans", sans-serif;
@@ -506,10 +498,10 @@
   margin: auto;
 }
 .subsribe_mailform .mfProgress .loader:before {
+  @include border-radius(50%);
   content: '';
   width: 20px;
   height: 20px;
-  border-radius: 50%;
 }
 .subsribe_mailform .mfProgress .loader:after {
   content: '';
@@ -580,6 +572,9 @@
   content: '\f058';
 }
 .subsribe_mailform .mfProgress .msg {
+  @include border-radius(30px);
+  @include box-shadow(2px 2px 2px 0 rgba(0, 0, 0, 0.5));
+  @include border-box();
   -moz-transform-origin: 0% 50%;
   -ms-transform-origin: 0% 50%;
   -o-transform-origin: 0% 50%;
@@ -594,15 +589,8 @@
   -ms-animation: notifanim-fo 0.4s ease-in-out forwards;
   -o-animation: notifanim-fo 0.4s ease-in-out forwards;
   animation: notifanim-fo 0.4s ease-in-out forwards;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5);
-  box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5);
   position: absolute;
   padding: 10px;
-  border-radius: 30px;
   font-size: 14px;
   line-height: 20px;
   opacity: 0;

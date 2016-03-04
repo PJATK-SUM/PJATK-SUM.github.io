@@ -140,24 +140,9 @@ strong {
 /*=======================================================
 						 Main Layout
 =========================================================*/
-.fleft {
-  float: left;
-}
-
-.fright {
-  float: right;
-}
 
 .cntr {
   text-align: center;
-}
-
-.left {
-  text-align: left;
-}
-
-.right {
-  text-align: right;
 }
 
 .wrapper {
@@ -920,14 +905,12 @@ blockquote p + cite {
   -moz-transform: translateX(-240px);
   -ms-transform: translateX(-240px);
   -o-transform: translateX(-240px);
-  -webkit-transform: translateX(-240px);
   transform: translateX(-240px);
 }
 .rd-mobilemenu.active .rd-mobilemenu_ul {
   -moz-transform: translateX(0);
   -ms-transform: translateX(0);
   -o-transform: translateX(0);
-  -webkit-transform: translateX(0);
   transform: translateX(0);
 }
 .rd-mobilemenu_ul a {
@@ -971,7 +954,6 @@ blockquote p + cite {
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
-  -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 .rd-mobilemenu_ul ul a {
@@ -1045,26 +1027,22 @@ blockquote p + cite {
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
-  -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 .rd-mobilepanel_toggle span:before, .rd-mobilepanel_toggle span:after {
   -moz-transform-origin: 1.71429px center;
   -ms-transform-origin: 1.71429px center;
   -o-transform-origin: 1.71429px center;
-  -webkit-transform-origin: 1.71429px center;
   transform-origin: 1.71429px center;
   -moz-transform-origin: 1.71429px center;
   -ms-transform-origin: 1.71429px center;
   -o-transform-origin: 1.71429px center;
-  -webkit-transform-origin: 1.71429px center;
   transform-origin: 1.71429px center;
 }
 .rd-mobilepanel_toggle.active span {
   -moz-transform: rotate(360deg);
   -ms-transform: rotate(360deg);
   -o-transform: rotate(360deg);
-  -webkit-transform: rotate(360deg);
   transform: rotate(360deg);
 }
 .rd-mobilepanel_toggle.active span:before, .rd-mobilepanel_toggle.active span:after {
@@ -1072,11 +1050,9 @@ blockquote p + cite {
   width: 15px;
 }
 .rd-mobilepanel_toggle.active span:before {
-  -webkit-transform: rotate3d(0, 0, 1, -40deg);
   transform: rotate3d(0, 0, 1, -40deg);
 }
 .rd-mobilepanel_toggle.active span:after {
-  -webkit-transform: rotate3d(0, 0, 1, 40deg);
   transform: rotate3d(0, 0, 1, 40deg);
 }
 
@@ -1184,7 +1160,6 @@ blockquote p + cite {
 }
 .parallax_image {
   background-repeat: no-repeat;
-  -webkit-background-size: cover;
   background-size: cover;
 }
 .parallax_pattern {
