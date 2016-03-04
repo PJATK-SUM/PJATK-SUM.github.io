@@ -11,6 +11,12 @@ body {
   font: 400 14px/24px "Arial", sans-serif;
   -webkit-text-size-adjust: none;
   background: #36393c;
+  overflow: hidden;
+  min-height: 500px;
+}
+
+.lt-ie9 body {
+  min-width: 1200px;
 }
 
 img {
@@ -127,14 +133,6 @@ strong {
 [class*='fa-']:before {
   font-weight: 400;
   font-family: "FontAwesome";
-}
-
-.page {
-  overflow: hidden;
-  min-height: 500px;
-}
-.lt-ie9 .page {
-  min-width: 1200px;
 }
 
 /*=======================================================
