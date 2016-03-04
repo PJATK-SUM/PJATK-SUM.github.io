@@ -2,6 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=latin,latin-ext);
 
 @import "_variables.scss";
+@import "_mixins.scss";
 
 /*========================================================
 						Main Styles
@@ -97,14 +98,12 @@ time {
 }
 
 a {
+  @include transition(0.3s);
   font: inherit;
   color: inherit;
   text-decoration: none;
-  -moz-transition: 0.3s;
-  -o-transition: 0.3s;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
 }
+
 a:focus {
   outline: none;
 }
@@ -295,6 +294,7 @@ p + .inline-list2 {
   color: #fff;
 }
 .brand:before {
+  @include border-radius(30px);
   position: absolute;
   display: inline-block;
   content: '\f10b';
@@ -307,19 +307,14 @@ p + .inline-list2 {
   font-size: 103px;
   line-height: 147px;
   text-align: center;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  border-radius: 30px;
 }
 @media (max-width: $mobile-breakpoint) {
   .brand:before {
+    @include border-radius(15px);
     width: 80px;
     height: 80px;
     font-size: 50px;
     line-height: 80px;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    border-radius: 15px;
   }
 }
 .brand_name {
@@ -361,13 +356,11 @@ p + .inline-list2 {
   }
 }
 .inline-list a {
+  @include border-radius(20px);
   display: inline-block;
   width: 70px;
   height: 70px;
   line-height: 70px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  border-radius: 20px;
   font-size: 25px;
   text-align: center;
   color: #fff;
@@ -683,10 +676,9 @@ blockquote p + cite {
 /*==================     Icons     ======================*/
 /*==================    Buttons    ======================*/
 .btn {
+  @include border-radius(30px);
+  @include border-box();
   display: inline-block;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  border-radius: 30px;
   padding: 21px 44px 21px 29px;
   font-size: 20px;
   font-weight: 300;
@@ -694,9 +686,6 @@ blockquote p + cite {
   font-family: "Open Sans", sans-serif;
   background: $color-primary;
   max-width: 100%;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
 }
 @media (max-width: 767px) {
   .btn {
@@ -716,13 +705,10 @@ blockquote p + cite {
   }
 }
 .btn i {
+  @include transition(0.4s);
   font-size: 25px;
   font-family: "FontAwesome";
   margin-right: 18px;
-  -moz-transition: 0.4s;
-  -o-transition: 0.4s;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
 }
 .btn:hover, .btn:active {
   background: #060606;
@@ -801,6 +787,7 @@ blockquote p + cite {
 }
 
 .sf-menu ul {
+  @include border-box();
   display: none;
   position: absolute;
   top: 100%;
@@ -810,9 +797,6 @@ blockquote p + cite {
   padding: 20px 0 20px;
   background: $color-primary;
   z-index: 999;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
 }
 .sf-menu ul:before {
@@ -830,13 +814,13 @@ blockquote p + cite {
 }
 
 .sf-menu ul {
-  -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16);
-  -moz-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16);
-  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16);
+  @include box-shadow(0 2px 3px 0 rgba(0, 0, 0, 0.16));
 }
+
 .sf-menu ul > li {
   position: relative;
 }
+
 .sf-menu ul > li > a {
   font-size: 14px;
   font-weight: 600;
@@ -845,19 +829,16 @@ blockquote p + cite {
   color: #fff;
   padding: 5px 5px;
 }
+
 .sf-menu ul > li.sfHover > a, .sf-menu ul > li > a:hover {
+  @include box-shadow(0 2px 3px 0 rgba(0, 0, 0, 0.16));
   color: $color-primary;
   background: #36393c;
   text-decoration: none;
-  -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16);
-  -moz-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16);
-  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16);
 }
 
 .sf-menu ul ul {
-  -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16);
-  -moz-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16);
-  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16);
+  @include box-shadow(0 2px 3px 0 rgba(0, 0, 0, 0.16));
   position: absolute;
   top: 0;
   left: 100%;
@@ -909,6 +890,7 @@ blockquote p + cite {
 }
 /*==================   RD Mobile Menu    =====================*/
 .rd-mobilemenu {
+  @include transition(0.3s all ease);
   display: none;
   position: fixed;
   top: 0;
@@ -916,16 +898,14 @@ blockquote p + cite {
   bottom: 0;
   z-index: 9999999;
   text-align: left;
-  -moz-transition: 0.3s all ease;
-  -o-transition: 0.3s all ease;
-  -webkit-transition: 0.3s all ease;
-  transition: 0.3s all ease;
 }
 .rd-mobilemenu.active {
   right: 0;
 }
 
 .rd-mobilemenu_ul {
+  @include transition(0.3s cubic-bezier(0.55, 0, 0.1, 1));
+  @include box-shadow(5px 0 5px 0 rgba(0, 0, 0, 0.1));
   position: fixed;
   top: -56px;
   left: 0;
@@ -937,22 +917,11 @@ blockquote p + cite {
   font-size: 14px;
   line-height: 20px;
   overflow: auto;
-  -webkit-box-shadow: 5px 0 5px 0 rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 5px 0 5px 0 rgba(0, 0, 0, 0.1);
-  box-shadow: 5px 0 5px 0 rgba(0, 0, 0, 0.1);
   -moz-transform: translateX(-240px);
   -ms-transform: translateX(-240px);
   -o-transform: translateX(-240px);
   -webkit-transform: translateX(-240px);
   transform: translateX(-240px);
-  -moz-transition: 0.3s ease;
-  -o-transition: 0.3s ease;
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
-  -moz-transition: 0.3s cubic-bezier(0.55, 0, 0.1, 1);
-  -o-transition: 0.3s cubic-bezier(0.55, 0, 0.1, 1);
-  -webkit-transition: 0.3s cubic-bezier(0.55, 0, 0.1, 1);
-  transition: 0.3s cubic-bezier(0.55, 0, 0.1, 1);
 }
 .rd-mobilemenu.active .rd-mobilemenu_ul {
   -moz-transform: translateX(0);
@@ -974,6 +943,8 @@ blockquote p + cite {
   color: #FFF;
 }
 .rd-mobilemenu_ul a .rd-submenu-toggle {
+  @include border-radius(50%);
+  @include transition(0.5s all ease);
   position: absolute;
   top: 50%;
   right: 11px;
@@ -983,13 +954,6 @@ blockquote p + cite {
   font: 400 10px "FontAwesome";
   line-height: 32px;
   text-align: center;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  -moz-transition: 0.5s all ease;
-  -o-transition: 0.5s all ease;
-  -webkit-transition: 0.5s all ease;
-  transition: 0.5s all ease;
   z-index: 1;
   background: rgba(0, 0, 0, 0.1);
 }
@@ -1023,6 +987,7 @@ blockquote p + cite {
 }
 
 .rd-mobilepanel {
+  @include box-shadow(0 3px 3px 0 rgba(0, 0, 0, 0.1));
   display: none;
   position: fixed;
   top: 0;
@@ -1031,9 +996,6 @@ blockquote p + cite {
   height: 56px;
   background: #FFF;
   color: #000;
-  -webkit-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
-  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
   z-index: 99999991;
 }
 
@@ -1057,35 +1019,27 @@ blockquote p + cite {
   height: 48px;
 }
 .rd-mobilepanel_toggle span {
+  @include transition(0.3s all ease);
   position: relative;
   display: block;
   margin: auto;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
 }
 .rd-mobilepanel_toggle span:after, .rd-mobilepanel_toggle span:before {
+  @include transition(0.3s all ease);
   content: "";
   position: absolute;
   left: 0;
   top: -8px;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
 }
 .rd-mobilepanel_toggle span:after {
   top: 8px;
 }
 .rd-mobilepanel_toggle span:after, .rd-mobilepanel_toggle span:before, .rd-mobilepanel_toggle span {
+  @include border-radius(2px);
   width: 24px;
   height: 4px;
   background-color: #000;
   backface-visibility: hidden;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
 }
 .rd-mobilepanel_toggle span {
   -moz-transform: rotate(180deg);
@@ -1166,16 +1120,14 @@ blockquote p + cite {
 }
 /*==================     ToTop     ======================*/
 .toTop {
+  @include border-radius(50%);
+  @include box-shadow(4px 4px 8px 0 rgba(0, 0, 0, 0.4));
   width: 50px;
   height: 50px;
   font-size: 24px;
   line-height: 46px;
   color: #fff;
   background: #36393c;
-  border-radius: 50%;
-  -webkit-box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.4);
-  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.4);
   position: fixed;
   right: 40px;
   bottom: 40px;
@@ -1295,15 +1247,11 @@ main {
   background: #fff;
 }
 main img {
-  -webkit-border-radius: 27px;
-  -moz-border-radius: 27px;
-  border-radius: 27px;
+  @include border-radius(27px);
 }
 
 .camera_container img {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
+  @include border-radius(0);
 }
 
 /*==================      section1     ======================*/
@@ -1484,6 +1432,7 @@ footer .brand {
   text-align: right;
 }
 footer .brand:before {
+  @include border-radius(20px);
   position: absolute;
   display: inline-block;
   content: '\f10b';
@@ -1496,9 +1445,6 @@ footer .brand:before {
   font-size: 49px;
   line-height: 70px;
   text-align: center;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  border-radius: 20px;
 }
 footer .brand_name {
   overflow: hidden;
