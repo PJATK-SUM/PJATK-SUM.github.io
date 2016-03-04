@@ -1,21 +1,24 @@
 @import url(http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=latin,latin-ext);
 
-@import "variables.scss";
+@import "_variables.scss";
 
 /*========================================================
 						Main Styles
 =========================================================*/
 body {
-  color: #c2c2c2;
+  color: $color-default;
   font: 400 14px/24px "Arial", sans-serif;
   -webkit-text-size-adjust: none;
   background: #36393c;
+}
+
+.page {
   overflow: hidden;
   min-height: 500px;
 }
 
-.lt-ie9 body {
+.lt-ie9 .page {
   min-width: 1200px;
 }
 
@@ -67,7 +70,7 @@ h4 {
 }
 
 h5 {
-  color: #29d9c2;
+  color: $color-primary;
   font-size: 20px;
   line-height: 23px;
 }
@@ -106,7 +109,7 @@ a:focus {
   outline: none;
 }
 a:hover {
-  color: #29d9c2;
+  color: $color-primary;
 }
 a:active {
   background-color: transparent;
@@ -167,14 +170,14 @@ strong {
 hr {
   border: none;
   height: 1px;
-  background: #c2c2c2;
+  background: $color-default;
 }
 
 .link1 {
-  color: #29d9c2;
+  color: $color-primary;
 }
 .link1:hover {
-  color: #c2c2c2;
+  color: $color-default;
 }
 
 @media (max-width: 767px) {
@@ -298,7 +301,7 @@ p + .inline-list2 {
   font-family: "FontAwesome";
   left: 0;
   top: 0;
-  background: #29d9c2;
+  background: $color-primary;
   width: 147px;
   height: 147px;
   font-size: 103px;
@@ -329,7 +332,7 @@ p + .inline-list2 {
   margin-left: 9px;
 }
 .brand_name span {
-  color: #29d9c2;
+  color: $color-primary;
 }
 @media (max-width: $mobile-breakpoint) {
   .brand_name {
@@ -372,7 +375,7 @@ p + .inline-list2 {
 }
 .inline-list a:hover {
   color: #fff;
-  background-color: #29d9c2;
+  background-color: $color-primary;
 }
 
 /*==================  Inline List2  ======================*/
@@ -391,7 +394,7 @@ p + .inline-list2 {
   display: inline-block;
   font-size: 24px;
   text-align: center;
-  color: #29d9c2;
+  color: $color-primary;
 }
 .inline-list2 a:hover {
   color: #36393c;
@@ -449,7 +452,7 @@ blockquote cite {
   color: #36393c;
 }
 blockquote cite a {
-  color: #29d9c2;
+  color: $color-primary;
   font-size: 15px;
   font-weight: 300;
   font-family: "Open Sans", sans-serif;
@@ -495,7 +498,7 @@ blockquote p + cite {
   font-weight: 400;
   font-size: 15px;
   font-family: "FontAwesome";
-  color: #29d9c2;
+  color: $color-primary;
 }
 .marked-list li + li {
   margin-top: 35px;
@@ -506,7 +509,7 @@ blockquote p + cite {
   }
 }
 .marked-list a:hover {
-  color: #29d9c2;
+  color: $color-primary;
   text-decoration: none;
 }
 
@@ -577,7 +580,7 @@ blockquote p + cite {
   }
 }
 .contact-list address {
-  color: #29d9c2;
+  color: $color-primary;
   font-size: 20px;
   line-height: 22px;
   font-weight: 300;
@@ -619,7 +622,7 @@ blockquote p + cite {
 }
 .privacy dt {
   font-family: "Open Sans", sans-serif;
-  color: #29d9c2;
+  color: $color-primary;
   font-size: 20px;
   line-height: 23px;
   font-weight: 300;
@@ -637,32 +640,28 @@ blockquote p + cite {
   margin-top: 55px;
 }
 .privacy a {
-  color: #29d9c2;
+  color: $color-primary;
   text-decoration: underline;
 }
 .privacy a:hover {
-  color: #c2c2c2;
+  color: $color-default;
 }
 
 /*==================  Backgrounds  ======================*/
 .bg1 {
-  background: #29d9c2;
-}
-
-.bg2 {
-  background: #36393c;
+  background: $color-primary;
 }
 
 .bg3 {
-  background: #c2c2c2;
+  background: $color-default;
 }
 
 .bg4 {
-  background: #f4f5f5;
+  background: $color-default-dark;
 }
 
 .color1 {
-  color: #29d9c2;
+  color: $color-primary;
 }
 
 .color2 {
@@ -670,7 +669,7 @@ blockquote p + cite {
 }
 
 .color3 {
-  color: #c2c2c2;
+  color: $color-default;
 }
 
 .color4 {
@@ -693,7 +692,7 @@ blockquote p + cite {
   font-weight: 300;
   color: #fff;
   font-family: "Open Sans", sans-serif;
-  background: #29d9c2;
+  background: $color-primary;
   max-width: 100%;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -760,7 +759,7 @@ blockquote p + cite {
   width: 83px;
   font-size: 60px;
   line-height: 60px;
-  color: #29d9c2;
+  color: $color-primary;
 }
 .box_cnt__no-flow {
   overflow: hidden;
@@ -795,10 +794,10 @@ blockquote p + cite {
   text-transform: uppercase;
 }
 .sf-menu > li.sfHover > a, .sf-menu > li > a:hover {
-  color: #29d9c2;
+  color: $color-primary;
 }
 .sf-menu > li.active > a {
-  color: #29d9c2;
+  color: $color-primary;
 }
 
 .sf-menu ul {
@@ -809,7 +808,7 @@ blockquote p + cite {
   width: 200px;
   margin-top: 0px;
   padding: 20px 0 20px;
-  background: #29d9c2;
+  background: $color-primary;
   z-index: 999;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -827,7 +826,7 @@ blockquote p + cite {
   height: 0;
   border-style: solid;
   border-width: 0 6.5px 7px 6.5px;
-  border-color: transparent transparent #29d9c2 transparent;
+  border-color: transparent transparent $color-primary transparent;
 }
 
 .sf-menu ul {
@@ -847,7 +846,7 @@ blockquote p + cite {
   padding: 5px 5px;
 }
 .sf-menu ul > li.sfHover > a, .sf-menu ul > li > a:hover {
-  color: #29d9c2;
+  color: $color-primary;
   background: #36393c;
   text-decoration: none;
   -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16);
@@ -887,7 +886,7 @@ blockquote p + cite {
   color: #fff;
 }
 .sf-menu ul ul > li.sfHover > a, .sf-menu ul ul > li > a:hover {
-  color: #29d9c2;
+  color: $color-primary;
   background: black;
 }
 
@@ -900,7 +899,7 @@ blockquote p + cite {
   top: -9px;
   /*content: $fa-angle-right;*/
   font: 400 16px/50px "FontAwesome";
-  color: #29d9c2;
+  color: $color-primary;
 }
 
 @media (max-width: 767px) {
@@ -971,7 +970,7 @@ blockquote p + cite {
   color: #2d2d2d;
 }
 .rd-mobilemenu_ul a:hover {
-  background: #29d9c2;
+  background: $color-primary;
   color: #FFF;
 }
 .rd-mobilemenu_ul a .rd-submenu-toggle {
@@ -1188,7 +1187,7 @@ blockquote p + cite {
 }
 .toTop:hover {
   color: #fff;
-  background: #29d9c2;
+  background: $color-primary;
   text-decoration: none;
 }
 
@@ -1319,7 +1318,7 @@ main img {
 .icon1, .icon2 {
   font-size: 100px;
   line-height: 130px;
-  color: #29d9c2;
+  color: $color-primary;
 }
 
 .col-md-4 + .col-md-4 .icon1 {
@@ -1362,7 +1361,7 @@ main img {
 }
 
 .icon4 {
-  color: #29d9c2;
+  color: $color-primary;
   font-size: 60px;
   line-height: 62px;
   margin-top: 9px;
@@ -1376,12 +1375,15 @@ main img {
   padding-top: 132px;
   padding-bottom: 110px;
 }
+
 .well.mod1 {
   padding-bottom: 145px;
 }
+
 .well.mod2 {
   padding-bottom: 134px;
 }
+
 .well.mod3 {
   padding-bottom: 34px;
 }
@@ -1488,7 +1490,7 @@ footer .brand:before {
   font-family: "FontAwesome";
   left: 0;
   top: 0;
-  background: #29d9c2;
+  background: $color-primary;
   width: 70px;
   height: 70px;
   font-size: 49px;
@@ -1508,7 +1510,7 @@ footer .brand_name {
   margin-left: 9px;
 }
 footer .brand_name span {
-  color: #29d9c2;
+  color: $color-primary;
 }
 footer .brand_slogan {
   font-size: 7px;

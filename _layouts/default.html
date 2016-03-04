@@ -2,9 +2,11 @@
 <html lang="pl">
   {% include head.html %}
   <body>
-    {% include header.html %}
-    {{ content }}
-    {% include footer.html %}
+    <div class="page">
+        {% include header.html %}
+        {{ content }}
+        {% include footer.html %}
+     </div>
     <script src="/js/script.js"></script>
   </body>
 </html>
