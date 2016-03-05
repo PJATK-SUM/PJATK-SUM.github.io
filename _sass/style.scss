@@ -279,7 +279,6 @@ p + .inline-list2 {
   color: #fff;
 }
 .brand:before {
-  @include border-radius(30px);
   position: absolute;
   display: inline-block;
   content: '\f10b';
@@ -292,14 +291,15 @@ p + .inline-list2 {
   font-size: 103px;
   line-height: 147px;
   text-align: center;
+  border-radius: 30px;
 }
 @media (max-width: $mobile-breakpoint) {
   .brand:before {
-    @include border-radius(15px);
     width: 80px;
     height: 80px;
     font-size: 50px;
     line-height: 80px;
+    border-radius: 15px;
   }
 }
 .brand_name {
@@ -341,7 +341,6 @@ p + .inline-list2 {
   }
 }
 .inline-list a {
-  @include border-radius(20px);
   display: inline-block;
   width: 70px;
   height: 70px;
@@ -350,6 +349,7 @@ p + .inline-list2 {
   text-align: center;
   color: #fff;
   background-color: #4e5459;
+  border-radius: 20px;
 }
 .inline-list a:hover {
   color: #fff;
@@ -661,7 +661,6 @@ blockquote p + cite {
 /*==================     Icons     ======================*/
 /*==================    Buttons    ======================*/
 .btn {
-  @include border-radius(30px);
   @include border-box();
   display: inline-block;
   padding: 21px 44px 21px 29px;
@@ -671,6 +670,7 @@ blockquote p + cite {
   font-family: "Open Sans", sans-serif;
   background: $color-primary;
   max-width: 100%;
+  border-radius: 30px;
 }
 @media (max-width: 767px) {
   .btn {
@@ -926,7 +926,6 @@ blockquote p + cite {
   color: #FFF;
 }
 .rd-mobilemenu_ul a .rd-submenu-toggle {
-  @include border-radius(50%);
   @include transition(0.5s all ease);
   position: absolute;
   top: 50%;
@@ -939,6 +938,7 @@ blockquote p + cite {
   text-align: center;
   z-index: 1;
   background: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
 }
 .rd-mobilemenu_ul a .rd-submenu-toggle:after {
   content: '\f078';
@@ -1017,11 +1017,11 @@ blockquote p + cite {
   top: 8px;
 }
 .rd-mobilepanel_toggle span:after, .rd-mobilepanel_toggle span:before, .rd-mobilepanel_toggle span {
-  @include border-radius(2px);
   width: 24px;
   height: 4px;
   background-color: #000;
   backface-visibility: hidden;
+  border-radius: 2px;
 }
 .rd-mobilepanel_toggle span {
   -moz-transform: rotate(180deg);
@@ -1096,7 +1096,6 @@ blockquote p + cite {
 }
 /*==================     ToTop     ======================*/
 .toTop {
-  @include border-radius(50%);
   @include box-shadow(4px 4px 8px 0 rgba(0, 0, 0, 0.4));
   width: 50px;
   height: 50px;
@@ -1112,6 +1111,7 @@ blockquote p + cite {
   text-align: center;
   text-decoration: none;
   z-index: 20;
+  border-radius: 50%;
 }
 .toTop:hover {
   color: #fff;
@@ -1222,11 +1222,11 @@ main {
   background: #fff;
 }
 main img {
-  @include border-radius(27px);
+  border-radius: 27px;
 }
 
 .camera_container img {
-  @include border-radius(0);
+  border-radius: 0;
 }
 
 /*==================      section1     ======================*/
@@ -1407,7 +1407,6 @@ footer .brand {
   text-align: right;
 }
 footer .brand:before {
-  @include border-radius(20px);
   position: absolute;
   display: inline-block;
   content: '\f10b';
@@ -1420,6 +1419,7 @@ footer .brand:before {
   font-size: 49px;
   line-height: 70px;
   text-align: center;
+  border-radius: 20px;
 }
 footer .brand_name {
   overflow: hidden;

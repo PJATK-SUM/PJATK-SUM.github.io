@@ -96,7 +96,6 @@
 }
 
 .camera_loader {
-  @include border-radius(18px);
   background: #fff url(../images/camera-loader.gif) no-repeat center;
   border: 1px solid #ffffff;
   height: 36px;
@@ -106,6 +105,7 @@
   margin: -18px 0 0 -18px;
   top: 50%;
   width: 36px;
+  border-radius: 18px;
   z-index: 3;
 }
 
@@ -245,7 +245,6 @@
   text-align: center;
 }
 .camera_pag_ul li {
-  @include border-radius(50%);
   @include border-box();
   display: inline-block;
   width: 34px;
@@ -259,6 +258,7 @@
   -webkit-transition: 0.3s all ease;
   transition: 0.3s all ease;
   border: 5px solid #fff;
+  border-radius: 50%;
 }
 .camera_pag_ul li.cameracurrent, .camera_pag_ul li:hover {
   border-color: #29d9c2;

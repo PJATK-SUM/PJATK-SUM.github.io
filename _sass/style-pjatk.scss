@@ -61,7 +61,6 @@
   ========================================================*/
 .mfValidation {
     @include box-shadow(2px 2px 2px 0 rgba(0, 0, 0, 0.1));
-    @include border-radius(5px);
     -moz-transform-origin: 0% 50%;
     -ms-transform-origin: 0% 50%;
     -o-transform-origin: 0% 50%;
@@ -93,6 +92,7 @@
     visibility: hidden;
     cursor: pointer;
     z-index: 998;
+    border-radius: 5px;
 }
 .mfValidation:hover {
     background: #efefef;
@@ -1269,7 +1269,6 @@ footer .brand_name span {
     }
 }
 .subsribe_mailform .mfControls .btn {
-    @include border-radius(30px);
     height: 79px;
     padding: 28px 42px;
     font-family: "Open Sans", sans-serif;
@@ -1280,6 +1279,7 @@ footer .brand_name span {
     -o-transition: 0.4s;
     -webkit-transition: 0.4s;
     transition: 0.4s;
+    border-radius: 30px;
 }
 .subsribe_mailform .mfControls > * {
     display: inline-block;
@@ -1389,7 +1389,6 @@ footer .brand_name span {
 }
 .subsribe_mailform .mfProgress .msg {
     @include border-box();
-    @include border-radius(30px);
     @include box-shadow(2px 2px 2px 0 rgba(0, 0, 0, 0.5));
     -moz-transform-origin: 0% 50%;
     -ms-transform-origin: 0% 50%;
@@ -1423,6 +1422,7 @@ footer .brand_name span {
     transform-origin: 50% 100%;
     background: #111;
     color: #fff;
+    border-radius: 30px;
 }
 .subsribe_mailform .mfProgress .msg:before {
     content: '';

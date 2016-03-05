@@ -264,11 +264,11 @@
   margin-top: 32px;
 }
 .owl-dots .owl-dot {
-  @include border-radius(50%);
   display: inline-block;
   width: 8px;
   height: 8px;
   background: #c2c2c2;
+  border-radius: 50%;
 }
 .owl-dots .owl-dot:hover, .owl-dots .owl-dot.active {
   background: #36393c;

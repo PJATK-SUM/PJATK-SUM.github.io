@@ -38,7 +38,6 @@
   /*margin-top: 0;*/
 }
 .subsribe_mailform .mailform label input, .subsribe_mailform .mailform label select, .subsribe_mailform .mailform label textarea {
-  @include border-radius(30px);
   text-transform: uppercase;
   display: block;
   width: 100%;
@@ -52,6 +51,7 @@
   color: #fff;
   background: transperent;
   border: 3px solid #fff;
+  border-radius: 30px;
 }
 @media (max-width: 479px) {
   .subsribe_mailform .mailform label input, .subsribe_mailform .mailform label select, .subsribe_mailform .mailform label textarea {
@@ -453,7 +453,6 @@
   }
 }
 .subsribe_mailform .mfControls .btn {
-  @include border-radius(30px);
   height: 79px;
   padding: 28px 42px;
   font-family: "Open Sans", sans-serif;
@@ -464,6 +463,7 @@
   -o-transition: 0.4s;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  border-radius: 30px;
 }
 .subsribe_mailform .mfControls > * {
   display: inline-block;
@@ -498,10 +498,10 @@
   margin: auto;
 }
 .subsribe_mailform .mfProgress .loader:before {
-  @include border-radius(50%);
   content: '';
   width: 20px;
   height: 20px;
+  border-radius: 50%;
 }
 .subsribe_mailform .mfProgress .loader:after {
   content: '';
@@ -572,7 +572,6 @@
   content: '\f058';
 }
 .subsribe_mailform .mfProgress .msg {
-  @include border-radius(30px);
   @include box-shadow(2px 2px 2px 0 rgba(0, 0, 0, 0.5));
   @include border-box();
   -moz-transform-origin: 0% 50%;
@@ -607,6 +606,7 @@
   transform-origin: 50% 100%;
   background: #111;
   color: #fff;
+  border-radius: 30px;
 }
 .subsribe_mailform .mfProgress .msg:before {
   content: '';
