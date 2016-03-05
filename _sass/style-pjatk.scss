@@ -60,7 +60,6 @@
 /* Mail Form Validation
   ========================================================*/
 .mfValidation {
-    @include box-shadow(2px 2px 2px 0 rgba(0, 0, 0, 0.1));
     -moz-transform-origin: 0% 50%;
     -ms-transform-origin: 0% 50%;
     -o-transform-origin: 0% 50%;
@@ -93,6 +92,7 @@
     cursor: pointer;
     z-index: 998;
     border-radius: 5px;
+    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.1);
 }
 .mfValidation:hover {
     background: #efefef;
@@ -130,7 +130,6 @@
 }
 @media (max-width: 767px) {
     .mfValidation {
-        @include box-shadow(none);
         text-align: right;
         top: auto;
         top: -18px;
@@ -141,6 +140,7 @@
         padding: 0;
         margin: 0 0 3px;
         min-height: 0;
+        box-shadow: none;
     }
     .mfValidation:before {
         display: none;
@@ -482,7 +482,6 @@
 
 .mfProgress .msg {
     @include border-box();
-    @include box-shadow(2px 2px 2px 0 rgba(0, 0, 0, 0.5));
     -moz-transform-origin: 0% 50%;
     -ms-transform-origin: 0% 50%;
     -o-transform-origin: 0% 50%;
@@ -516,6 +515,7 @@
     transform-origin: 50% 100%;
     background: #111;
     color: #fff;
+    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5);
 }
 .mfProgress .msg:before {
     content: '';
@@ -973,7 +973,6 @@ footer .brand_name span {
     transform: translateY(-30%);
 }
 .subsribe_mailform .mfValidation {
-    @include box-shadow(none);
     -moz-transform-origin: 0% 50%;
     -ms-transform-origin: 0% 50%;
     -o-transform-origin: 0% 50%;
@@ -1006,6 +1005,7 @@ footer .brand_name span {
     cursor: pointer;
     z-index: 998;
     background: none;
+    box-shadow: none;
 }
 .subsribe_mailform .mfValidation:hover {
     /*background: lighten(saturate(adjust_hue(map-get($scheme, default), 0), 0%), 77.64705882352942%);*/
@@ -1043,7 +1043,6 @@ footer .brand_name span {
 }
 @media (max-width: 767px) {
     .subsribe_mailform .mfValidation {
-        @include box-shadow(none);
         text-align: right;
         top: auto;
         left: auto;
@@ -1053,6 +1052,7 @@ footer .brand_name span {
         padding: 0;
         margin: 0 0 3px;
         min-height: 0;
+        box-shadow: none;
     }
     .subsribe_mailform .mfValidation:before {
         display: none;
@@ -1389,7 +1389,6 @@ footer .brand_name span {
 }
 .subsribe_mailform .mfProgress .msg {
     @include border-box();
-    @include box-shadow(2px 2px 2px 0 rgba(0, 0, 0, 0.5));
     -moz-transform-origin: 0% 50%;
     -ms-transform-origin: 0% 50%;
     -o-transform-origin: 0% 50%;
@@ -1423,6 +1422,7 @@ footer .brand_name span {
     background: #111;
     color: #fff;
     border-radius: 30px;
+    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5);
 }
 .subsribe_mailform .mfProgress .msg:before {
     content: '';

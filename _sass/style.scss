@@ -799,7 +799,7 @@ blockquote p + cite {
 }
 
 .sf-menu ul {
-  @include box-shadow(0 2px 3px 0 rgba(0, 0, 0, 0.16));
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16);
 }
 
 .sf-menu ul > li {
@@ -816,14 +816,13 @@ blockquote p + cite {
 }
 
 .sf-menu ul > li.sfHover > a, .sf-menu ul > li > a:hover {
-  @include box-shadow(0 2px 3px 0 rgba(0, 0, 0, 0.16));
   color: $color-primary;
   background: #36393c;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16);
   text-decoration: none;
 }
 
 .sf-menu ul ul {
-  @include box-shadow(0 2px 3px 0 rgba(0, 0, 0, 0.16));
   position: absolute;
   top: 0;
   left: 100%;
@@ -834,6 +833,7 @@ blockquote p + cite {
   z-index: 4;
   margin-top: -20px;
   background: #36393c;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16);
 }
 .sf-menu ul ul:before {
   position: absolute;
@@ -890,7 +890,6 @@ blockquote p + cite {
 
 .rd-mobilemenu_ul {
   @include transition(0.3s cubic-bezier(0.55, 0, 0.1, 1));
-  @include box-shadow(5px 0 5px 0 rgba(0, 0, 0, 0.1));
   position: fixed;
   top: -56px;
   left: 0;
@@ -906,6 +905,7 @@ blockquote p + cite {
   -ms-transform: translateX(-240px);
   -o-transform: translateX(-240px);
   transform: translateX(-240px);
+  box-shadow: 5px 0 5px 0 rgba(0, 0, 0, 0.1);
 }
 .rd-mobilemenu.active .rd-mobilemenu_ul {
   -moz-transform: translateX(0);
@@ -969,7 +969,6 @@ blockquote p + cite {
 }
 
 .rd-mobilepanel {
-  @include box-shadow(0 3px 3px 0 rgba(0, 0, 0, 0.1));
   display: none;
   position: fixed;
   top: 0;
@@ -979,6 +978,7 @@ blockquote p + cite {
   background: #FFF;
   color: #000;
   z-index: 99999991;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
 }
 
 .rd-mobilepanel_title {
@@ -1096,7 +1096,6 @@ blockquote p + cite {
 }
 /*==================     ToTop     ======================*/
 .toTop {
-  @include box-shadow(4px 4px 8px 0 rgba(0, 0, 0, 0.4));
   width: 50px;
   height: 50px;
   font-size: 24px;
@@ -1112,6 +1111,7 @@ blockquote p + cite {
   text-decoration: none;
   z-index: 20;
   border-radius: 50%;
+  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.4);
 }
 .toTop:hover {
   color: #fff;
