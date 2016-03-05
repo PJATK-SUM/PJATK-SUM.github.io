@@ -901,17 +901,11 @@ blockquote p + cite {
   font-size: 14px;
   line-height: 20px;
   overflow: auto;
-  -moz-transform: translateX(-240px);
-  -ms-transform: translateX(-240px);
-  -o-transform: translateX(-240px);
-  transform: translateX(-240px);
+  @include transform(translateX(-240px));
   box-shadow: 5px 0 5px 0 rgba(0, 0, 0, 0.1);
 }
 .rd-mobilemenu.active .rd-mobilemenu_ul {
-  -moz-transform: translateX(0);
-  -ms-transform: translateX(0);
-  -o-transform: translateX(0);
-  transform: translateX(0);
+  @include transform(translateX(0));
 }
 .rd-mobilemenu_ul a {
   display: block;
@@ -951,10 +945,7 @@ blockquote p + cite {
   position: relative;
 }
 .rd-mobilemenu_ul a.rd-with-ul.active .rd-submenu-toggle {
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  transform: rotate(180deg);
+  @include transform(rotate(180deg));
 }
 .rd-mobilemenu_ul ul a {
   padding-left: 40px;
