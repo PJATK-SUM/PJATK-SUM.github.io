@@ -195,7 +195,7 @@
   height: 100%;
 }
 .camera_caption .container {
-  @include border-box();
+  box-sizing: border-box;
   color: #fff;
   text-align: center;
 }
@@ -245,7 +245,7 @@
   text-align: center;
 }
 .camera_pag_ul li {
-  @include border-box();
+  box-sizing: border-box;
   display: inline-block;
   width: 34px;
   height: 34px;

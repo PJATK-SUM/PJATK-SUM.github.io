@@ -661,7 +661,7 @@ blockquote p + cite {
 /*==================     Icons     ======================*/
 /*==================    Buttons    ======================*/
 .btn {
-  @include border-box();
+  box-sizing: border-box;
   display: inline-block;
   padding: 21px 44px 21px 29px;
   font-size: 20px;
@@ -772,7 +772,7 @@ blockquote p + cite {
 }
 
 .sf-menu ul {
-  @include border-box();
+  box-sizing: border-box;
   display: none;
   position: absolute;
   top: 100%;

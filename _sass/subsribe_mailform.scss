@@ -26,7 +26,7 @@
   border: none;
 }
 .subsribe_mailform .mailform * {
-  @include border-box();
+  box-sizing: border-box;
 }
 .subsribe_mailform .mailform label {
   position: relative;
@@ -572,7 +572,7 @@
   content: '\f058';
 }
 .subsribe_mailform .mfProgress .msg {
-  @include border-box();
+  box-sizing: border-box;
   -moz-transform-origin: 0% 50%;
   -ms-transform-origin: 0% 50%;
   -o-transform-origin: 0% 50%;
