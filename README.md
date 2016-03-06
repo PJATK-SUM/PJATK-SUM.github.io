@@ -28,6 +28,13 @@ przy pomocy gema Jekyll. Dokumentacja oraz kroki potrzebne do instalacji Jekylla
 lokalnie i testowania strony dostępne są zarówno na
 [stronie projektu Jekyll](http://jekyllrb.com) jak i wspomnianej stronie GitHub Pages.
 
+## Jak developować
+
+1. Zainstalować sobie ruby (najlepiej rbenv + ```gem install bundler```)
+1. Wejsc do katalogu projektu
+1. Zrobic ```bundle install```
+1. Żeby uruchomić serwer ```bundle exec jekyll serve```
+
 # Aktualizacje
 
 W celu dokonania aktualizacji strony prosimy:
