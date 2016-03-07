@@ -1,4 +1,13 @@
-# Misja strony SUM
+# Strona Internetowa Sieci Urządzeń Mobilnych
+
+Niniejsze repozytorium jest głównym miejscem pracy nad stroną Internetową
+specjalizacji Sieci Urządzeń Mobilnych przy PJATK w Warszawie.
+
+Jeżeli chcesz pomóc przy stronie - zapoznaj się z informacjami poniżej
+dotyczącymi tego co powinno się na stronie znajdować oraz tego jak pracować
+nad zmianami.
+
+## Misja strony SUM
 
 [Strona internetowa specjalizacji Sieci Urządzeń Mobilnych](http://pjatk-sum.github.io/) zawiera podstawowe
 informacje o naszej specializacji - czym się zajmujemy, jakich technologii się
@@ -21,7 +30,7 @@ i ograniczać kiedy można rozmiar oraz ilość zasobów umieszczanych na stroni
 **Przed wprowadzaniem zmian i wysyłaniem pull requesta, proszę się upewnić,
 że wprowadzone zmiany zgadzają się z "Misją strony SUM".**
 
-# Technologia
+## Technologia
 
 Strona jest hostowana na [GitHub Pages](http://pages.github.com) i budowana jest
 przy pomocy gema Jekyll. Dokumentacja oraz kroki potrzebne do instalacji Jekylla
@@ -30,12 +39,12 @@ lokalnie i testowania strony dostępne są zarówno na
 
 ## Jak developować
 
-1. Zainstalować sobie ruby (najlepiej rbenv + ```gem install bundler```)
-1. Wejsc do katalogu projektu
-1. Zrobic ```bundle install```
-1. Żeby uruchomić serwer ```bundle exec jekyll serve```
+1. Zainstalować ruby (najlepiej [rbenv](https://github.com/rbenv/rbenv) + `gem install bundler`)
+1. Wejść do katalogu projektu
+1. Uruchomić `bundle install`
+1. Uruchomić serwer za pomocą `bundle exec jekyll serve`
 
-# Aktualizacje
+## Aktualizacje
 
 W celu dokonania aktualizacji strony prosimy:
 
