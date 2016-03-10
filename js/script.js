@@ -12,14 +12,6 @@ function isIE() {
 
 include('https://code.jquery.com/ui/1.11.2/jquery-ui.min.js');
 
-/* Nicescroll
- ========================================================*/
-
-include('js/jquery.nicescroll.min.js');
-
-$(document).ready(function() {
-    $("html").niceScroll();
-});
 
 
 /* Stick up menus
