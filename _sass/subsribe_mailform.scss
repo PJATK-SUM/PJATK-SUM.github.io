@@ -1,3 +1,5 @@
+@import "_mixins.scss";
+
 /*========================================================
                       Contact Form
 =========================================================*/
@@ -24,8 +26,6 @@
   border: none;
 }
 .subsribe_mailform .mailform * {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 .subsribe_mailform .mailform label {
@@ -51,8 +51,6 @@
   color: #fff;
   background: transperent;
   border: 3px solid #fff;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
   border-radius: 30px;
 }
 @media (max-width: 479px) {
@@ -173,9 +171,6 @@
   -ms-animation: notifanim-fo 0.4s cubic-bezier(0.55, 0, 0.1, 1) forwards;
   -o-animation: notifanim-fo 0.4s cubic-bezier(0.55, 0, 0.1, 1) forwards;
   animation: notifanim-fo 0.4s cubic-bezier(0.55, 0, 0.1, 1) forwards;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
   position: absolute;
   top: 5px;
   left: auto;
@@ -194,6 +189,7 @@
   cursor: pointer;
   z-index: 998;
   background: none;
+  box-shadow: none;
 }
 .subsribe_mailform .mfValidation:hover {
   /*background: lighten(saturate(adjust_hue(map-get($scheme, default), 0), 0%), 77.64705882352942%);*/
@@ -240,8 +236,6 @@
     padding: 0;
     margin: 0 0 3px;
     min-height: 0;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
     box-shadow: none;
   }
   .subsribe_mailform .mfValidation:before {
@@ -459,9 +453,6 @@
   }
 }
 .subsribe_mailform .mfControls .btn {
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  border-radius: 30px;
   height: 79px;
   padding: 28px 42px;
   font-family: "Open Sans", sans-serif;
@@ -472,6 +463,7 @@
   -o-transition: 0.4s;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  border-radius: 30px;
 }
 .subsribe_mailform .mfControls > * {
   display: inline-block;
@@ -580,6 +572,7 @@
   content: '\f058';
 }
 .subsribe_mailform .mfProgress .msg {
+  box-sizing: border-box;
   -moz-transform-origin: 0% 50%;
   -ms-transform-origin: 0% 50%;
   -o-transform-origin: 0% 50%;
@@ -594,15 +587,8 @@
   -ms-animation: notifanim-fo 0.4s ease-in-out forwards;
   -o-animation: notifanim-fo 0.4s ease-in-out forwards;
   animation: notifanim-fo 0.4s ease-in-out forwards;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5);
-  box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5);
   position: absolute;
   padding: 10px;
-  border-radius: 30px;
   font-size: 14px;
   line-height: 20px;
   opacity: 0;
@@ -619,6 +605,8 @@
   transform-origin: 50% 100%;
   background: #111;
   color: #fff;
+  border-radius: 30px;
+  box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5);
 }
 .subsribe_mailform .mfProgress .msg:before {
   content: '';

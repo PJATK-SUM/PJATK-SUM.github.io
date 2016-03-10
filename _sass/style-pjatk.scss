@@ -1,3 +1,4 @@
+@import "_mixins.scss";
 
 /* camera.scss
 =========================================================*/
@@ -19,6 +20,7 @@
 /* Mail Form PlaceHolder
 ========================================================*/
 .mfPlaceHolder {
+    @include transition(0.3s all ease);
     text-transform: uppercase;
     font: inherit;
     cursor: text;
@@ -29,27 +31,15 @@
     line-height: 1.2;
     color: #c2c2c2;
     opacity: 1;
-    -moz-transition: 0.3s all ease;
-    -o-transition: 0.3s all ease;
-    -webkit-transition: 0.3s all ease;
-    transition: 0.3s all ease;
 }
 *:-webkit-autofill ~ .mfPlaceHolder {
     opacity: .4;
-    -moz-transform: translateY(-30%);
-    -ms-transform: translateY(-30%);
-    -o-transform: translateY(-30%);
-    -webkit-transform: translateY(-30%);
-    transform: translateY(-30%);
+    @include transform(translateY(-30%));
 }
 .mfPlaceHolder.state-1 {
     font-size: 12px;
     opacity: .4;
-    -moz-transform: translateY(-30%);
-    -ms-transform: translateY(-30%);
-    -o-transform: translateY(-30%);
-    -webkit-transform: translateY(-30%);
-    transform: translateY(-30%);
+    @include transform(translateY(-30%));
 }
 
 .label-left .mfPlaceHolder {
@@ -64,21 +54,12 @@
     -o-transform-origin: 0% 50%;
     -webkit-transform-origin: 0% 50%;
     transform-origin: 0% 50%;
-    -moz-transition: 0.3s all ease;
-    -o-transition: 0.3s all ease;
-    -webkit-transition: 0.3s all ease;
-    transition: 0.3s all ease;
+    @include transition(0.3s all ease);
     -webkit-animation: notifanim-fo 0.4s cubic-bezier(0.55, 0, 0.1, 1) forwards;
     -moz-animation: notifanim-fo 0.4s cubic-bezier(0.55, 0, 0.1, 1) forwards;
     -ms-animation: notifanim-fo 0.4s cubic-bezier(0.55, 0, 0.1, 1) forwards;
     -o-animation: notifanim-fo 0.4s cubic-bezier(0.55, 0, 0.1, 1) forwards;
     animation: notifanim-fo 0.4s cubic-bezier(0.55, 0, 0.1, 1) forwards;
-    -webkit-box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.1);
-    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.1);
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
     position: absolute;
     top: -10px;
     left: 20px;
@@ -96,6 +77,8 @@
     visibility: hidden;
     cursor: pointer;
     z-index: 998;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.1);
 }
 .mfValidation:hover {
     background: #efefef;
@@ -106,23 +89,11 @@
     right: 50%;
     top: 100%;
     margin-top: 4px;
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-    /*@include triangle(bottom, 10px, 8px, lighten(saturate(adjust_hue(map-get($scheme, default), 0), 3.9999999999999822%), 80.98039215686273%));*/
-    -moz-transition: 0.3s all ease;
-    -o-transition: 0.3s all ease;
-    -webkit-transition: 0.3s all ease;
-    transition: 0.3s all ease;
+    @include transform(translateY(-50%));
+    @include transition(0.3s all ease);
 }
 .mfValidation.error {
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
-    -webkit-transform: scale(1);
-    transform: scale(1);
+    @include transform(scale(1));
     opacity: 1;
     visibility: visible;
     -webkit-animation: notifanim 0.4s cubic-bezier(0.55, 0, 0.1, 1) forwards;
@@ -143,8 +114,6 @@
         padding: 0;
         margin: 0 0 3px;
         min-height: 0;
-        -webkit-box-shadow: none;
-        -moz-box-shadow: none;
         box-shadow: none;
     }
     .mfValidation:before {
@@ -365,10 +334,7 @@
 }
 .mfControls .btn {
     margin-top: 3px;
-    -moz-transition: 0.4s;
-    -o-transition: 0.4s;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
+    @include transition(0.4s);
     padding: 20px 76px;
     color: #fff;
 }
@@ -384,20 +350,13 @@
     position: relative;
 }
 .mfProgress .cnt, .mfProgress .loader {
-    -moz-transition: 0.4s all ease-in-out;
-    -o-transition: 0.4s all ease-in-out;
-    -webkit-transition: 0.4s all ease-in-out;
-    transition: 0.4s all ease-in-out;
+    @include transition(0.4s all ease-in-out);
 }
 .mfProgress .loader {
     opacity: 0;
     text-align: center;
     letter-spacing: 10px;
-    -moz-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    -o-transform: scale(1.2);
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
+    @include transform(scale(1.2));
 }
 .mfProgress .loader, .mfProgress .loader:before, .mfProgress .loader:after {
     position: absolute;
@@ -420,25 +379,14 @@
     color: #767676;
     font: 400 30px "FontAwesome";
     line-height: inherit;
-    -moz-transition: 0.4s all ease-in-out;
-    -o-transition: 0.4s all ease-in-out;
-    -webkit-transition: 0.4s all ease-in-out;
-    transition: 0.4s all ease-in-out;
-    -moz-transform: scale(0) rotate(-60deg);
-    -ms-transform: scale(0) rotate(-60deg);
-    -o-transform: scale(0) rotate(-60deg);
-    -webkit-transform: scale(0) rotate(-60deg);
-    transform: scale(0) rotate(-60deg);
+    @include transition(0.4s all ease-in-out);
+    @include transform(scale(0) rotate(-60deg));
 }
 .mfProgress.sending:before, .mfProgress.fail:before, .mfProgress.success:before {
     display: none;
 }
 .mfProgress.sending .cnt, .mfProgress.fail .cnt, .mfProgress.success .cnt {
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
-    -webkit-transform: scale(1);
-    transform: scale(1);
+    @include transform(scale(1));
     opacity: 1;
 }
 .lt-ie9 .mfProgress.sending .cnt, .lt-ie9 .mfProgress.fail .cnt, .lt-ie9 .mfProgress.success .cnt {
@@ -447,11 +395,7 @@
 }
 .mfProgress.sending .loader, .mfProgress.fail .loader, .mfProgress.success .loader {
     opacity: 0;
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
-    -webkit-transform: scale(1);
-    transform: scale(1);
+    @include transform(scale(1));
 }
 .lt-ie9 .mfProgress.sending .loader, .lt-ie9 .mfProgress.fail .loader, .lt-ie9 .mfProgress.success .loader {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
@@ -465,11 +409,7 @@
     animation: fout 0.4s ease-in-out 1 forwards;
 }
 .mfProgress.fail .loader:after, .mfProgress.success .loader:after {
-    -moz-transform: scale(1) rotate(0deg);
-    -ms-transform: scale(1) rotate(0deg);
-    -o-transform: scale(1) rotate(0deg);
-    -webkit-transform: scale(1) rotate(0deg);
-    transform: scale(1) rotate(0deg);
+    @include transform(scale(1) rotate(0deg));
 }
 .mfProgress.sending .loader:before {
     -webkit-animation: motion 3s cubic-bezier(0.77, 0, 0.175, 1) infinite;
@@ -486,26 +426,18 @@
 }
 
 .mfProgress .msg {
+    box-sizing: border-box;
     -moz-transform-origin: 0% 50%;
     -ms-transform-origin: 0% 50%;
     -o-transform-origin: 0% 50%;
     -webkit-transform-origin: 0% 50%;
     transform-origin: 0% 50%;
-    -moz-transition: 0.3s all ease;
-    -o-transition: 0.3s all ease;
-    -webkit-transition: 0.3s all ease;
-    transition: 0.3s all ease;
+    @include transition(0.3s all ease);
     -webkit-animation: notifanim-fo 0.4s ease-in-out forwards;
     -moz-animation: notifanim-fo 0.4s ease-in-out forwards;
     -ms-animation: notifanim-fo 0.4s ease-in-out forwards;
     -o-animation: notifanim-fo 0.4s ease-in-out forwards;
     animation: notifanim-fo 0.4s ease-in-out forwards;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5);
-    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5);
     position: absolute;
     padding: 10px;
     border-radius: 27px;
@@ -525,22 +457,20 @@
     transform-origin: 50% 100%;
     background: #111;
     color: #fff;
+    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5);
 }
 .mfProgress .msg:before {
     content: '';
     position: absolute;
     bottom: 100%;
     right: 50%;
-    transform: translate(50%, 0%);
+    @include transform(translate(50%, 0%));
     width: 0;
     height: 0;
     border-style: solid;
     border-width: 0 6px 6px 6px;
     border-color: transparent transparent #111 transparent;
-    -moz-transition: 0.4s all ease-in-out;
-    -o-transition: 0.4s all ease-in-out;
-    -webkit-transition: 0.4s all ease-in-out;
-    transition: 0.4s all ease-in-out;
+    @include transition(0.4s all ease-in-out);
 }
 .mfProgress.fail .msg, .mfProgress.success .msg {
     transform: scale(1);
@@ -959,10 +889,7 @@ footer .brand_name span {
     line-height: 1.2;
     color: #fff;
     opacity: 1;
-    -moz-transition: 0.3s all ease;
-    -o-transition: 0.3s all ease;
-    -webkit-transition: 0.3s all ease;
-    transition: 0.3s all ease;
+    @include transition(0.3s all ease);
 }
 *:-webkit-autofill ~ .subsribe_mailform .mfPlaceHolder {
     opacity: .4;
@@ -987,18 +914,12 @@ footer .brand_name span {
     -o-transform-origin: 0% 50%;
     -webkit-transform-origin: 0% 50%;
     transform-origin: 0% 50%;
-    -moz-transition: 0.3s all ease;
-    -o-transition: 0.3s all ease;
-    -webkit-transition: 0.3s all ease;
-    transition: 0.3s all ease;
+    @include transition(0.3s all ease);
     -webkit-animation: notifanim-fo 0.4s cubic-bezier(0.55, 0, 0.1, 1) forwards;
     -moz-animation: notifanim-fo 0.4s cubic-bezier(0.55, 0, 0.1, 1) forwards;
     -ms-animation: notifanim-fo 0.4s cubic-bezier(0.55, 0, 0.1, 1) forwards;
     -o-animation: notifanim-fo 0.4s cubic-bezier(0.55, 0, 0.1, 1) forwards;
     animation: notifanim-fo 0.4s cubic-bezier(0.55, 0, 0.1, 1) forwards;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
     position: absolute;
     top: 5px;
     left: auto;
@@ -1017,6 +938,7 @@ footer .brand_name span {
     cursor: pointer;
     z-index: 998;
     background: none;
+    box-shadow: none;
 }
 .subsribe_mailform .mfValidation:hover {
     /*background: lighten(saturate(adjust_hue(map-get($scheme, default), 0), 0%), 77.64705882352942%);*/
@@ -1033,10 +955,7 @@ footer .brand_name span {
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     /*@include triangle(bottom, 10px, 8px, lighten(saturate(adjust_hue(map-get($scheme, default), 0), 3.9999999999999822%), 80.98039215686273%));*/
-    -moz-transition: 0.3s all ease;
-    -o-transition: 0.3s all ease;
-    -webkit-transition: 0.3s all ease;
-    transition: 0.3s all ease;
+    @include transition(0.3s all ease);
 }
 .subsribe_mailform .mfValidation.error {
     -moz-transform: scale(1);
@@ -1063,8 +982,6 @@ footer .brand_name span {
         padding: 0;
         margin: 0 0 3px;
         min-height: 0;
-        -webkit-box-shadow: none;
-        -moz-box-shadow: none;
         box-shadow: none;
     }
     .subsribe_mailform .mfValidation:before {
@@ -1282,19 +1199,14 @@ footer .brand_name span {
     }
 }
 .subsribe_mailform .mfControls .btn {
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    border-radius: 30px;
     height: 79px;
     padding: 28px 42px;
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
     font-weight: 600;
     text-transform: uppercase;
-    -moz-transition: 0.4s;
-    -o-transition: 0.4s;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
+    @include transition(0.4s);
+    border-radius: 30px;
 }
 .subsribe_mailform .mfControls > * {
     display: inline-block;
@@ -1305,10 +1217,7 @@ footer .brand_name span {
     position: relative;
 }
 .subsribe_mailform .mfProgress .cnt, .subsribe_mailform .mfProgress .loader {
-    -moz-transition: 0.4s all ease-in-out;
-    -o-transition: 0.4s all ease-in-out;
-    -webkit-transition: 0.4s all ease-in-out;
-    transition: 0.4s all ease-in-out;
+    @include transition(0.4s all ease-in-out);
 }
 .subsribe_mailform .mfProgress .loader {
     opacity: 0;
@@ -1341,10 +1250,7 @@ footer .brand_name span {
     color: white;
     font: 400 30px "FontAwesome";
     line-height: inherit;
-    -moz-transition: 0.4s all ease-in-out;
-    -o-transition: 0.4s all ease-in-out;
-    -webkit-transition: 0.4s all ease-in-out;
-    transition: 0.4s all ease-in-out;
+    @include transition(0.4s all ease-in-out);
     -moz-transform: scale(0) rotate(-60deg);
     -ms-transform: scale(0) rotate(-60deg);
     -o-transform: scale(0) rotate(-60deg);
@@ -1403,29 +1309,20 @@ footer .brand_name span {
     content: '\f058';
 }
 .subsribe_mailform .mfProgress .msg {
+    box-sizing: border-box;
     -moz-transform-origin: 0% 50%;
     -ms-transform-origin: 0% 50%;
     -o-transform-origin: 0% 50%;
     -webkit-transform-origin: 0% 50%;
     transform-origin: 0% 50%;
-    -moz-transition: 0.3s all ease;
-    -o-transition: 0.3s all ease;
-    -webkit-transition: 0.3s all ease;
-    transition: 0.3s all ease;
+    @include transition(0.3s all ease);
     -webkit-animation: notifanim-fo 0.4s ease-in-out forwards;
     -moz-animation: notifanim-fo 0.4s ease-in-out forwards;
     -ms-animation: notifanim-fo 0.4s ease-in-out forwards;
     -o-animation: notifanim-fo 0.4s ease-in-out forwards;
     animation: notifanim-fo 0.4s ease-in-out forwards;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5);
-    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5);
     position: absolute;
     padding: 10px;
-    border-radius: 30px;
     font-size: 14px;
     line-height: 20px;
     opacity: 0;
@@ -1442,6 +1339,8 @@ footer .brand_name span {
     transform-origin: 50% 100%;
     background: #111;
     color: #fff;
+    border-radius: 30px;
+    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5);
 }
 .subsribe_mailform .mfProgress .msg:before {
     content: '';
@@ -1454,10 +1353,7 @@ footer .brand_name span {
     border-style: solid;
     border-width: 0 6px 6px 6px;
     border-color: transparent transparent #111 transparent;
-    -moz-transition: 0.4s all ease-in-out;
-    -o-transition: 0.4s all ease-in-out;
-    -webkit-transition: 0.4s all ease-in-out;
-    transition: 0.4s all ease-in-out;
+    @include transition(0.4s all ease-in-out);
 }
 .subsribe_mailform .mfProgress.fail .msg, .subsribe_mailform .mfProgress.success .msg {
     transform: scale(1);
@@ -1509,8 +1405,7 @@ footer .brand_name span {
     left: 50%;
     margin-top: -15px;
     margin-left: -50px;
-    -webkit-transition: opacity .5s; /* Safari */
-    transition: opacity .5s;
+    @include transition(opacity .5s);
 }
 
 .video-img:hover::after{

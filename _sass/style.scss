@@ -1,13 +1,26 @@
 @import url(http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=latin,latin-ext);
+
+@import "_variables.scss";
+@import "_mixins.scss";
+
 /*========================================================
 						Main Styles
 =========================================================*/
 body {
-  color: #c2c2c2;
+  color: $color-default;
   font: 400 14px/24px "Arial", sans-serif;
   -webkit-text-size-adjust: none;
   background: #36393c;
+}
+
+.page {
+  overflow: hidden;
+  min-height: 500px;
+}
+
+.lt-ie9 .page {
+  min-width: 1200px;
 }
 
 img {
@@ -25,9 +38,10 @@ h2 {
   font-size: 70px;
   line-height: 1;
 }
-@media (max-width: 991px) {
+@media (max-width: $mobile-breakpoint) {
   h2 {
     font-size: 50px;
+    line-height: 60px;
   }
 }
 
@@ -35,7 +49,7 @@ h3 {
   font-size: 50px;
   line-height: 1;
 }
-@media (max-width: 991px) {
+@media (max-width: $mobile-breakpoint) {
   h3 {
     font-size: 40px;
   }
@@ -49,7 +63,7 @@ h4 {
   font-size: 35px;
   line-height: 1;
 }
-@media (max-width: 991px) {
+@media (max-width: $mobile-breakpoint) {
   h4 {
     font-size: 25px;
     line-height: 1.2;
@@ -57,11 +71,11 @@ h4 {
 }
 
 h5 {
-  color: #29d9c2;
+  color: $color-primary;
   font-size: 20px;
   line-height: 23px;
 }
-@media (max-width: 991px) {
+@media (max-width: $mobile-breakpoint) {
   h5 {
     font-size: 16px;
     line-height: 1.2;
@@ -84,19 +98,17 @@ time {
 }
 
 a {
+  @include transition(0.3s);
   font: inherit;
   color: inherit;
   text-decoration: none;
-  -moz-transition: 0.3s;
-  -o-transition: 0.3s;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
 }
+
 a:focus {
   outline: none;
 }
 a:hover {
-  color: #29d9c2;
+  color: $color-primary;
 }
 a:active {
   background-color: transparent;
@@ -125,35 +137,12 @@ strong {
   font-family: "FontAwesome";
 }
 
-.page {
-  overflow: hidden;
-  min-height: 500px;
-}
-.lt-ie9 .page {
-  min-width: 1200px;
-}
-
 /*=======================================================
 						 Main Layout
 =========================================================*/
-.fleft {
-  float: left;
-}
-
-.fright {
-  float: right;
-}
 
 .cntr {
   text-align: center;
-}
-
-.left {
-  text-align: left;
-}
-
-.right {
-  text-align: right;
 }
 
 .wrapper {
@@ -165,14 +154,14 @@ strong {
 hr {
   border: none;
   height: 1px;
-  background: #c2c2c2;
+  background: $color-default;
 }
 
 .link1 {
-  color: #29d9c2;
+  color: $color-primary;
 }
 .link1:hover {
-  color: #c2c2c2;
+  color: $color-default;
 }
 
 @media (max-width: 767px) {
@@ -281,7 +270,7 @@ p + .inline-list2 {
   font-weight: 300;
   text-align: right;
 }
-@media (max-width: 991px) {
+@media (max-width: $mobile-breakpoint) {
   .brand {
     padding-left: 90px;
   }
@@ -296,24 +285,20 @@ p + .inline-list2 {
   font-family: "FontAwesome";
   left: 0;
   top: 0;
-  background: #29d9c2;
+  background: $color-primary;
   width: 147px;
   height: 147px;
   font-size: 103px;
   line-height: 147px;
   text-align: center;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
   border-radius: 30px;
 }
-@media (max-width: 991px) {
+@media (max-width: $mobile-breakpoint) {
   .brand:before {
     width: 80px;
     height: 80px;
     font-size: 50px;
     line-height: 80px;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
     border-radius: 15px;
   }
 }
@@ -327,9 +312,9 @@ p + .inline-list2 {
   margin-left: 9px;
 }
 .brand_name span {
-  color: #29d9c2;
+  color: $color-primary;
 }
-@media (max-width: 991px) {
+@media (max-width: $mobile-breakpoint) {
   .brand_name {
     margin-top: -20px;
     font-size: 45px;
@@ -350,7 +335,7 @@ p + .inline-list2 {
 .inline-list li + li {
   margin-left: 20px;
 }
-@media (max-width: 991px) {
+@media (max-width: $mobile-breakpoint) {
   .inline-list li + li {
     margin-left: 7px;
   }
@@ -360,17 +345,15 @@ p + .inline-list2 {
   width: 70px;
   height: 70px;
   line-height: 70px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  border-radius: 20px;
   font-size: 25px;
   text-align: center;
   color: #fff;
   background-color: #4e5459;
+  border-radius: 20px;
 }
 .inline-list a:hover {
   color: #fff;
-  background-color: #29d9c2;
+  background-color: $color-primary;
 }
 
 /*==================  Inline List2  ======================*/
@@ -380,7 +363,7 @@ p + .inline-list2 {
 .inline-list2 li + li {
   margin-left: 20px;
 }
-@media (max-width: 991px) {
+@media (max-width: $mobile-breakpoint) {
   .inline-list2 li + li {
     margin-left: 7px;
   }
@@ -389,7 +372,7 @@ p + .inline-list2 {
   display: inline-block;
   font-size: 24px;
   text-align: center;
-  color: #29d9c2;
+  color: $color-primary;
 }
 .inline-list2 a:hover {
   color: #36393c;
@@ -447,7 +430,7 @@ blockquote cite {
   color: #36393c;
 }
 blockquote cite a {
-  color: #29d9c2;
+  color: $color-primary;
   font-size: 15px;
   font-weight: 300;
   font-family: "Open Sans", sans-serif;
@@ -480,7 +463,7 @@ blockquote p + cite {
   font-weight: 400;
   line-height: 23px;
 }
-@media (max-width: 991px) {
+@media (max-width: $mobile-breakpoint) {
   .marked-list li {
     padding-left: 20px;
   }
@@ -493,18 +476,18 @@ blockquote p + cite {
   font-weight: 400;
   font-size: 15px;
   font-family: "FontAwesome";
-  color: #29d9c2;
+  color: $color-primary;
 }
 .marked-list li + li {
   margin-top: 35px;
 }
-@media (max-width: 991px) {
+@media (max-width: $mobile-breakpoint) {
   .marked-list li + li {
     margin-top: 15px;
   }
 }
 .marked-list a:hover {
-  color: #29d9c2;
+  color: $color-primary;
   text-decoration: none;
 }
 
@@ -517,7 +500,7 @@ blockquote p + cite {
   line-height: 20px;
   padding-left: 69px;
 }
-@media (max-width: 991px) {
+@media (max-width: $mobile-breakpoint) {
   .dlist1 {
     overflow: hidden;
   }
@@ -533,7 +516,7 @@ blockquote p + cite {
   left: 0;
   line-height: 1;
 }
-@media (max-width: 991px) {
+@media (max-width: $mobile-breakpoint) {
   .dlist1:before {
     top: 0;
     font-size: 40px;
@@ -575,7 +558,7 @@ blockquote p + cite {
   }
 }
 .contact-list address {
-  color: #29d9c2;
+  color: $color-primary;
   font-size: 20px;
   line-height: 22px;
   font-weight: 300;
@@ -593,7 +576,7 @@ blockquote p + cite {
   width: 240px;
   text-align: center;
 }
-@media (max-width: 991px) {
+@media (max-width: $mobile-breakpoint) {
   .contact-list li {
     width: 100%;
   }
@@ -601,7 +584,7 @@ blockquote p + cite {
 .contact-list li + li {
   margin-left: 58px;
 }
-@media (max-width: 991px) {
+@media (max-width: $mobile-breakpoint) {
   .contact-list li + li {
     margin-left: 0;
   }
@@ -617,12 +600,12 @@ blockquote p + cite {
 }
 .privacy dt {
   font-family: "Open Sans", sans-serif;
-  color: #29d9c2;
+  color: $color-primary;
   font-size: 20px;
   line-height: 23px;
   font-weight: 300;
 }
-@media (max-width: 991px) {
+@media (max-width: $mobile-breakpoint) {
   .privacy dt {
     font-size: 16px;
     line-height: 1.2;
@@ -635,32 +618,28 @@ blockquote p + cite {
   margin-top: 55px;
 }
 .privacy a {
-  color: #29d9c2;
+  color: $color-primary;
   text-decoration: underline;
 }
 .privacy a:hover {
-  color: #c2c2c2;
+  color: $color-default;
 }
 
 /*==================  Backgrounds  ======================*/
 .bg1 {
-  background: #29d9c2;
-}
-
-.bg2 {
-  background: #36393c;
+  background: $color-primary;
 }
 
 .bg3 {
-  background: #c2c2c2;
+  background: $color-default;
 }
 
 .bg4 {
-  background: #f4f5f5;
+  background: $color-default-dark;
 }
 
 .color1 {
-  color: #29d9c2;
+  color: $color-primary;
 }
 
 .color2 {
@@ -668,7 +647,7 @@ blockquote p + cite {
 }
 
 .color3 {
-  color: #c2c2c2;
+  color: $color-default;
 }
 
 .color4 {
@@ -682,20 +661,16 @@ blockquote p + cite {
 /*==================     Icons     ======================*/
 /*==================    Buttons    ======================*/
 .btn {
+  box-sizing: border-box;
   display: inline-block;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  border-radius: 30px;
   padding: 21px 44px 21px 29px;
   font-size: 20px;
   font-weight: 300;
   color: #fff;
   font-family: "Open Sans", sans-serif;
-  background: #29d9c2;
+  background: $color-primary;
   max-width: 100%;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+  border-radius: 30px;
 }
 @media (max-width: 767px) {
   .btn {
@@ -715,13 +690,10 @@ blockquote p + cite {
   }
 }
 .btn i {
+  @include transition(0.4s);
   font-size: 25px;
   font-family: "FontAwesome";
   margin-right: 18px;
-  -moz-transition: 0.4s;
-  -o-transition: 0.4s;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
 }
 .btn:hover, .btn:active {
   background: #060606;
@@ -758,7 +730,7 @@ blockquote p + cite {
   width: 83px;
   font-size: 60px;
   line-height: 60px;
-  color: #29d9c2;
+  color: $color-primary;
 }
 .box_cnt__no-flow {
   overflow: hidden;
@@ -793,13 +765,14 @@ blockquote p + cite {
   text-transform: uppercase;
 }
 .sf-menu > li.sfHover > a, .sf-menu > li > a:hover {
-  color: #29d9c2;
+  color: $color-primary;
 }
 .sf-menu > li.active > a {
-  color: #29d9c2;
+  color: $color-primary;
 }
 
 .sf-menu ul {
+  box-sizing: border-box;
   display: none;
   position: absolute;
   top: 100%;
@@ -807,11 +780,8 @@ blockquote p + cite {
   width: 200px;
   margin-top: 0px;
   padding: 20px 0 20px;
-  background: #29d9c2;
+  background: $color-primary;
   z-index: 999;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
 }
 .sf-menu ul:before {
@@ -825,17 +795,17 @@ blockquote p + cite {
   height: 0;
   border-style: solid;
   border-width: 0 6.5px 7px 6.5px;
-  border-color: transparent transparent #29d9c2 transparent;
+  border-color: transparent transparent $color-primary transparent;
 }
 
 .sf-menu ul {
-  -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16);
-  -moz-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16);
   box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16);
 }
+
 .sf-menu ul > li {
   position: relative;
 }
+
 .sf-menu ul > li > a {
   font-size: 14px;
   font-weight: 600;
@@ -844,19 +814,15 @@ blockquote p + cite {
   color: #fff;
   padding: 5px 5px;
 }
+
 .sf-menu ul > li.sfHover > a, .sf-menu ul > li > a:hover {
-  color: #29d9c2;
+  color: $color-primary;
   background: #36393c;
-  text-decoration: none;
-  -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16);
-  -moz-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16);
   box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16);
+  text-decoration: none;
 }
 
 .sf-menu ul ul {
-  -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16);
-  -moz-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16);
-  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16);
   position: absolute;
   top: 0;
   left: 100%;
@@ -867,6 +833,7 @@ blockquote p + cite {
   z-index: 4;
   margin-top: -20px;
   background: #36393c;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16);
 }
 .sf-menu ul ul:before {
   position: absolute;
@@ -885,7 +852,7 @@ blockquote p + cite {
   color: #fff;
 }
 .sf-menu ul ul > li.sfHover > a, .sf-menu ul ul > li > a:hover {
-  color: #29d9c2;
+  color: $color-primary;
   background: black;
 }
 
@@ -898,7 +865,7 @@ blockquote p + cite {
   top: -9px;
   /*content: $fa-angle-right;*/
   font: 400 16px/50px "FontAwesome";
-  color: #29d9c2;
+  color: $color-primary;
 }
 
 @media (max-width: 767px) {
@@ -908,6 +875,7 @@ blockquote p + cite {
 }
 /*==================   RD Mobile Menu    =====================*/
 .rd-mobilemenu {
+  @include transition(0.3s all ease);
   display: none;
   position: fixed;
   top: 0;
@@ -915,16 +883,13 @@ blockquote p + cite {
   bottom: 0;
   z-index: 9999999;
   text-align: left;
-  -moz-transition: 0.3s all ease;
-  -o-transition: 0.3s all ease;
-  -webkit-transition: 0.3s all ease;
-  transition: 0.3s all ease;
 }
 .rd-mobilemenu.active {
   right: 0;
 }
 
 .rd-mobilemenu_ul {
+  @include transition(0.3s cubic-bezier(0.55, 0, 0.1, 1));
   position: fixed;
   top: -56px;
   left: 0;
@@ -936,29 +901,11 @@ blockquote p + cite {
   font-size: 14px;
   line-height: 20px;
   overflow: auto;
-  -webkit-box-shadow: 5px 0 5px 0 rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 5px 0 5px 0 rgba(0, 0, 0, 0.1);
+  @include transform(translateX(-240px));
   box-shadow: 5px 0 5px 0 rgba(0, 0, 0, 0.1);
-  -moz-transform: translateX(-240px);
-  -ms-transform: translateX(-240px);
-  -o-transform: translateX(-240px);
-  -webkit-transform: translateX(-240px);
-  transform: translateX(-240px);
-  -moz-transition: 0.3s ease;
-  -o-transition: 0.3s ease;
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
-  -moz-transition: 0.3s cubic-bezier(0.55, 0, 0.1, 1);
-  -o-transition: 0.3s cubic-bezier(0.55, 0, 0.1, 1);
-  -webkit-transition: 0.3s cubic-bezier(0.55, 0, 0.1, 1);
-  transition: 0.3s cubic-bezier(0.55, 0, 0.1, 1);
 }
 .rd-mobilemenu.active .rd-mobilemenu_ul {
-  -moz-transform: translateX(0);
-  -ms-transform: translateX(0);
-  -o-transform: translateX(0);
-  -webkit-transform: translateX(0);
-  transform: translateX(0);
+  @include transform(translateX(0));
 }
 .rd-mobilemenu_ul a {
   display: block;
@@ -969,10 +916,11 @@ blockquote p + cite {
   color: #2d2d2d;
 }
 .rd-mobilemenu_ul a:hover {
-  background: #29d9c2;
+  background: $color-primary;
   color: #FFF;
 }
 .rd-mobilemenu_ul a .rd-submenu-toggle {
+  @include transition(0.5s all ease);
   position: absolute;
   top: 50%;
   right: 11px;
@@ -982,15 +930,9 @@ blockquote p + cite {
   font: 400 10px "FontAwesome";
   line-height: 32px;
   text-align: center;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  -moz-transition: 0.5s all ease;
-  -o-transition: 0.5s all ease;
-  -webkit-transition: 0.5s all ease;
-  transition: 0.5s all ease;
   z-index: 1;
   background: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
 }
 .rd-mobilemenu_ul a .rd-submenu-toggle:after {
   content: '\f078';
@@ -1003,11 +945,7 @@ blockquote p + cite {
   position: relative;
 }
 .rd-mobilemenu_ul a.rd-with-ul.active .rd-submenu-toggle {
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg);
+  @include transform(rotate(180deg));
 }
 .rd-mobilemenu_ul ul a {
   padding-left: 40px;
@@ -1030,10 +968,8 @@ blockquote p + cite {
   height: 56px;
   background: #FFF;
   color: #000;
-  -webkit-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
-  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
   z-index: 99999991;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
 }
 
 .rd-mobilepanel_title {
@@ -1056,23 +992,17 @@ blockquote p + cite {
   height: 48px;
 }
 .rd-mobilepanel_toggle span {
+  @include transition(0.3s all ease);
   position: relative;
   display: block;
   margin: auto;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
 }
 .rd-mobilepanel_toggle span:after, .rd-mobilepanel_toggle span:before {
+  @include transition(0.3s all ease);
   content: "";
   position: absolute;
   left: 0;
   top: -8px;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
 }
 .rd-mobilepanel_toggle span:after {
   top: 8px;
@@ -1082,34 +1012,28 @@ blockquote p + cite {
   height: 4px;
   background-color: #000;
   backface-visibility: hidden;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
   border-radius: 2px;
 }
 .rd-mobilepanel_toggle span {
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
-  -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 .rd-mobilepanel_toggle span:before, .rd-mobilepanel_toggle span:after {
   -moz-transform-origin: 1.71429px center;
   -ms-transform-origin: 1.71429px center;
   -o-transform-origin: 1.71429px center;
-  -webkit-transform-origin: 1.71429px center;
   transform-origin: 1.71429px center;
   -moz-transform-origin: 1.71429px center;
   -ms-transform-origin: 1.71429px center;
   -o-transform-origin: 1.71429px center;
-  -webkit-transform-origin: 1.71429px center;
   transform-origin: 1.71429px center;
 }
 .rd-mobilepanel_toggle.active span {
   -moz-transform: rotate(360deg);
   -ms-transform: rotate(360deg);
   -o-transform: rotate(360deg);
-  -webkit-transform: rotate(360deg);
   transform: rotate(360deg);
 }
 .rd-mobilepanel_toggle.active span:before, .rd-mobilepanel_toggle.active span:after {
@@ -1117,11 +1041,9 @@ blockquote p + cite {
   width: 15px;
 }
 .rd-mobilepanel_toggle.active span:before {
-  -webkit-transform: rotate3d(0, 0, 1, -40deg);
   transform: rotate3d(0, 0, 1, -40deg);
 }
 .rd-mobilepanel_toggle.active span:after {
-  -webkit-transform: rotate3d(0, 0, 1, 40deg);
   transform: rotate3d(0, 0, 1, 40deg);
 }
 
@@ -1171,10 +1093,6 @@ blockquote p + cite {
   line-height: 46px;
   color: #fff;
   background: #36393c;
-  border-radius: 50%;
-  -webkit-box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.4);
-  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.4);
   position: fixed;
   right: 40px;
   bottom: 40px;
@@ -1183,10 +1101,12 @@ blockquote p + cite {
   text-align: center;
   text-decoration: none;
   z-index: 20;
+  border-radius: 50%;
+  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.4);
 }
 .toTop:hover {
   color: #fff;
-  background: #29d9c2;
+  background: $color-primary;
   text-decoration: none;
 }
 
@@ -1231,7 +1151,6 @@ blockquote p + cite {
 }
 .parallax_image {
   background-repeat: no-repeat;
-  -webkit-background-size: cover;
   background-size: cover;
 }
 .parallax_pattern {
@@ -1294,14 +1213,10 @@ main {
   background: #fff;
 }
 main img {
-  -webkit-border-radius: 27px;
-  -moz-border-radius: 27px;
   border-radius: 27px;
 }
 
 .camera_container img {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
   border-radius: 0;
 }
 
@@ -1317,7 +1232,7 @@ main img {
 .icon1, .icon2 {
   font-size: 100px;
   line-height: 130px;
-  color: #29d9c2;
+  color: $color-primary;
 }
 
 .col-md-4 + .col-md-4 .icon1 {
@@ -1360,7 +1275,7 @@ main img {
 }
 
 .icon4 {
-  color: #29d9c2;
+  color: $color-primary;
   font-size: 60px;
   line-height: 62px;
   margin-top: 9px;
@@ -1374,12 +1289,15 @@ main img {
   padding-top: 132px;
   padding-bottom: 110px;
 }
+
 .well.mod1 {
   padding-bottom: 145px;
 }
+
 .well.mod2 {
   padding-bottom: 134px;
 }
+
 .well.mod3 {
   padding-bottom: 34px;
 }
@@ -1390,15 +1308,21 @@ main img {
 }
 
 .well3 {
-  padding-top: 133px;
-  padding-bottom: 135px;
+  padding: 133px 0;
+  color: #858585;
+}
+
+@media (max-width: $mobile-breakpoint) {
+  .well3 {
+    padding: 50px 0;
+  }
 }
 
 .well4 {
   padding-top: 185px;
   padding-bottom: 198px;
 }
-@media (max-width: 991px) {
+@media (max-width: $mobile-breakpoint) {
   .well4 {
     padding-top: 80px;
     padding-bottom: 80px;
@@ -1480,14 +1404,12 @@ footer .brand:before {
   font-family: "FontAwesome";
   left: 0;
   top: 0;
-  background: #29d9c2;
+  background: $color-primary;
   width: 70px;
   height: 70px;
   font-size: 49px;
   line-height: 70px;
   text-align: center;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
   border-radius: 20px;
 }
 footer .brand_name {
@@ -1500,7 +1422,7 @@ footer .brand_name {
   margin-left: 9px;
 }
 footer .brand_name span {
-  color: #29d9c2;
+  color: $color-primary;
 }
 footer .brand_slogan {
   font-size: 7px;
