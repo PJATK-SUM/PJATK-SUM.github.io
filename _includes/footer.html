@@ -5,25 +5,22 @@
             <div class="col-md-8">
                 <ul class="list-inline">
                     <li>
-                        <a href="#home">Home</a>
+                        <a href="#home">{{ site.i18n[page.language].menu.home }}</a>
                     </li>
                     <li class="footer-menu-divider">&sdot;</li>
                     <li>
-                        <a href="#about">About</a>
+                        <a href="#about">{{ site.i18n[page.language].menu.about }}</a>
                     </li>
                     <li class="footer-menu-divider">&sdot;</li>
                     <li>
-                        <a href="#services">Services</a>
+                        <a href="#services">{{ site.i18n[page.language].menu.services }}</a>
                     </li>
                     <li class="footer-menu-divider">&sdot;</li>
                     <li>
-                        <a href="#contact">Contact</a>
+                        <a href="#contact">{{ site.i18n[page.language].menu.contact }}</a>
                     </li>
                 </ul>
-                <p class="copyright text-muted small">{{ site.copyright }}</p>
-            </div>
-            <div class="col-md-4">
-                {{ site.credits }}
+                <p class="copyright text-muted small">Copyright &copy; {{ site.time | date: '%Y' }} {{ site.author }}. All Rights Reserved.</p>
             </div>
         </div>
     </div>

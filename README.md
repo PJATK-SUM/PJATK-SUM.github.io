@@ -1,35 +1,49 @@
-# Landing Page Jekyll theme
+# Misja strony SUM
 
-Jekyll theme based on [landing-page bootstrap theme ](http://startbootstrap.com/templates/landing-page/)
+[Strona internetowa specjalizacji Sieci Urządzeń Mobilnych](http://pjatk-sum.github.io/) zawiera podstawowe
+informacje o naszej specializacji - czym się zajmujemy, jakich technologii się
+uczymy, jakimi urządzeniami dysponujemy, itd.
 
-## How to use
- - Place a image in `/img/services/`
- - Create posts to display your services. Use the follow as an example:
+Jest ona źródłem informacji zarówno dla osób zastanawiających się nad wybraniem
+SUM jako swojej specjalizacji będąc studentem PJATK, osób już będących
+studentami tej specjalizacji jak i osób zainteresowanych PJATK w ogóle.
 
-```txt
----
-layout: default
-img: ipad.png
-category: Services
-title: The service title
----
-The description of this service
-```
+Jednocześnie jest to strona informacyjna, raczej statyczna poza aktualizacją
+głównej treści. W późniejszym czasie może pojawić się na niej sekcja z
+artykułami czy prezentacjami pracy inżynierskich, jednak nie powinna być ona
+interaktywna - to jest zawierać formularze, fora internetowe, komentarze,
+pluginy Disqus czy Facebook.
 
-## Demo
-View this jekyll theme in action [here](https://swcool.github.io/landing-page-theme)
+Nasza strona powinna być przeznaczona głównie na urządzenia mobilne, na których
+z resztą polega cała specjalizacja. Należy przestrzegać dobrych praktyk designu
+i ograniczać kiedy można rozmiar oraz ilość zasobów umieszczanych na stronie.
 
-## Screenshot
-![screenshot](https://raw.githubusercontent.com/swcool/landing-page-theme/master/img/screenshot.png)
+**Przed wprowadzaniem zmian i wysyłaniem pull requesta, proszę się upewnić,
+że wprowadzone zmiany zgadzają się z "Misją strony SUM".**
 
-===
+# Technologia
 
-For more Jekyll details, read [documentation](http://jekyllrb.com/).
-This Jekyll theme used [Freelancer Jekyll theme](https://github.com/jeromelachaud/freelancer-theme/) as reference.
+Strona jest hostowana na [GitHub Pages](http://pages.github.com) i budowana jest
+przy pomocy gema Jekyll. Dokumentacja oraz kroki potrzebne do instalacji Jekylla
+lokalnie i testowania strony dostępne są zarówno na
+[stronie projektu Jekyll](http://jekyllrb.com) jak i wspomnianej stronie GitHub Pages.
 
-## License
-The contents of this repository are licensed under the [Apache
-2.0](http://www.apache.org/licenses/LICENSE-2.0.html).
+## Jak developować
 
-## Version
-1.0.1
+1. Zainstalować sobie ruby (najlepiej rbenv + ```gem install bundler```)
+1. Wejsc do katalogu projektu
+1. Zrobic ```bundle install```
+1. Żeby uruchomić serwer ```bundle exec jekyll serve```
+
+# Aktualizacje
+
+W celu dokonania aktualizacji strony prosimy:
+
+1. Sklonować niniejsze repozytorium na dysk komputera za pomocą narzędzia `git`,
+lub zrobić forka repozytorium klikając przycisk w prawym górnym rogu strony i
+forkowane repozytorium sklonować na dysk
+1. Stworzyć branch wprowadzający zmianę, np. `git checkout -b zmiana-naglowka`
+1. Wprowadzić zamierzone zmiany
+1. Wysłać zmiany na GitHub, albo na odpowiadający branch w głównym repozytorium,
+albo na branch `master` we własnym, forkowanym repozytorium
+1. Utworzyć nowy pull request i opisać/umotywować zmianę.

@@ -1,7 +1,13 @@
+{% if site.i18n[page.language].services %}
 <section id="services">
-<!-- Page Content -->
-{% for post in site.posts reversed %}
-  {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+    <div class="container content-section text-center">
+        <hr class="section-heading-spacer-bottom">
+        <div class="clearfix"></div>
+        <h1>{{ site.i18n[page.language].menu.services }}</h1>
+    </div>
+    <!-- Page Content -->
+    {% for post in site.i18n[page.language].services %}
+    {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
     {% if thecycle == 'odd' %}
     <div class="content-section-a">
 
@@ -12,10 +18,19 @@
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
                     <h2 class="section-heading">{{ post.title }}</h2>
-                    <div class="lead">{{ post.content }}</div>
+                    <div class="lead">{{ post.text }}</div>
                 </div>
                 <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                    <img class="img-responsive" src="img/services/{{ post.img }}" alt="">
+
+                    {% if post.img %}
+                    {% if post.url %}
+                    <a href="{{post.url}}">
+                        {% endif %}
+                        <img class="img-responsive rounded" src="/img/services/{{ post.img }}" alt="{{ post.title}}">
+                        {% if post.url %}
+                    </a>
+                    {% endif %}
+                    {% endif %}
                 </div>
             </div>
 
@@ -35,10 +50,18 @@
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
                     <h2 class="section-heading">{{ post.title }}</h2>
-                    <div class="lead">{{ post.content }}</div>
+                    <div class="lead">{{ post.text }}</div>
                 </div>
                 <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-                  <img class="img-responsive" src="img/services/{{ post.img }}" alt="">
+                    {% if post.img %}
+                    {% if post.url %}
+                    <a href="{{post.url}}">
+                        {% endif %}
+                        <img class="img-responsive rounded" src="/img/services/{{ post.img }}" alt="{{ post.title}}">
+                        {% if post.url %}
+                    </a>
+                    {% endif %}
+                    {% endif %}
                 </div>
             </div>
 
@@ -48,5 +71,6 @@
     </div>
     <!-- /.content-section-b -->
     {% endif %}
-{% endfor %}
+    {% endfor %}
 </section>
+{% endif %}
