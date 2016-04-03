@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="pl">
-  {% include head.html %}
-  <body>
-    <div class="page">
-      {% include header.html %}
-      {{ content }}
-      {% include footer.html %}
-    </div>
-    <script src="/js/script.js"></script>
-  </body>
+<html>
+{% include head.html %}
+
+<body>
+{% include header.html %}
+{% include about.html %}
+{% include page_content.html %}
+{% include contact.html %}
+{% include footer.html %}
+{% include js.html %}
+</body>
 </html>

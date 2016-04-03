@@ -1,27 +1,28 @@
-<!--========================================================
-                          FOOTER
-=========================================================-->
+<!-- Footer -->
 <footer>
     <div class="container">
-
-        <div class="brand">
-            <h1 class="brand_name">
-                <a href="./">Sieci urządzeń <span>mobilnych</span></a>
-            </h1>
-
-            <p class="brand_slogan">
-                Polsko-Japońska Akademia Technik Komputerowych
-            </p>
-        </div>
-
-        <ul class="inline-list">
-            <li><a href="#" class="fa-instagram"></a></li>
-            <li><a href="#" class="fa-twitter"></a></li>
-            <li><a href="#" class="fa-facebook"></a></li>
-        </ul>
-
-        <div class="wrapper cntr">
-            <p>Copyright © <span id="copyright-year"></span> | <a href="#">Privacy Policy</a>
+        <div class="row">
+            <div class="col-md-8">
+                <ul class="list-inline">
+                    <li>
+                        <a href="#home">{{ site.i18n[page.language].menu.home }}</a>
+                    </li>
+                    <li class="footer-menu-divider">&sdot;</li>
+                    <li>
+                        <a href="#about">{{ site.i18n[page.language].menu.about }}</a>
+                    </li>
+                    <li class="footer-menu-divider">&sdot;</li>
+                    <li>
+                        <a href="#services">{{ site.i18n[page.language].menu.services }}</a>
+                    </li>
+                    <li class="footer-menu-divider">&sdot;</li>
+                    <li>
+                        <a href="#contact">{{ site.i18n[page.language].menu.contact }}</a>
+                    </li>
+                </ul>
+                <p class="copyright text-muted small">Copyright &copy; {{ site.time | date: '%Y' }} {{ site.author }}.
+                    All Rights Reserved.</p>
+            </div>
         </div>
     </div>
 </footer>
