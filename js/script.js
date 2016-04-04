@@ -415,36 +415,39 @@
             var setActive = function () {
                 var url = window.location.hash;
                 $itemLink.removeClass('active');
+                var $a = null;
+
 
                 if (url == "") {
-                    $itemLink.first().addClass('active');
+                   $a = $itemLink.first().addClass('active');
 
                 } else {
-                    var $a = $item.find('*[href="' + url + '"]');
+                   $a = $item.find('*[href="' + url + '"]');
 
                     $a.addClass('active');
                 }
 
 
-                $itemLink.each(function (index) {
-                    var href = $(this).attr('href');
-                    arrElementTop[index] = $(href).offset().top;
-                });
+                setTimeout(function(){
+                    $itemLink.each(function (index) {
+                        var href = $(this).attr('href');
+                        arrElementTop[index] = $(href).offset().top;
+                    });
+                }, 200);
 
-                setActivePosition(0);
+
+                setActivePosition($a.offset().top);
 
             };
 
             var leftRang = 0, rightRang = 0, indexArr = 0, tmpTop = 0, tmpIndex = -1;
-            var interval = null;
 
             var setActivePosition = function (position) {
-
 
                 if (arrElementTop.length > 1) {
 
                     leftRang = arrElementTop[indexArr];
-                    if (indexArr != arrElementTop.length) {
+                    if (indexArr < arrElementTop.length-1) {
                         rightRang = arrElementTop[indexArr + 1];
                     } else {
                         rightRang = leftRang * 2;
@@ -469,7 +472,8 @@
 
                     } else {
                         if (tmpTop <= position) {
-                            indexArr++;
+                             if (indexArr < arrElementTop.length-1)
+                                indexArr++;
                         }
                         else {
                             indexArr--;
@@ -529,7 +533,7 @@
 
             init();
 
-            $(window).scroll(function () {
+            $(window).bind('scroll', function () {
                 var scrollTop = $(this).scrollTop();
                 if (!isMobile) {
 
@@ -548,7 +552,7 @@
 
             });
 
-            $(window).resize(function () {
+            $(window).bind('resize', function () {
                 init();
             })
 
@@ -559,58 +563,49 @@
     // ******  Animation fadeInUp ********
     $.fn.fadeInUp = function () {
 
-        this.each(function () {
+        var animatedPositionTop = [];
+        var $this = $(this);
+        var offsetElement = 100;
+        this.each(function (index) {
             var $el = $(this);
             $el.css('opacity', 0);
-            var bounds = $el.offset();
-            var elOuterHeight = $el.outerHeight();
-            var $win = $(window);
-            var windowHeight = $win.height();
 
+            animatedPositionTop[index] = $el.offset().top + offsetElement;
 
-            $win.bind('scroll', function(){
-                var win = $(this);
+        });
 
-                var viewport = {
-                    top: win.scrollTop()
+        var leftRang = 0, indexArr = 0, tmpIndex = -1;
+        var windowHeight = $(window).height();
+        var animation = function (window) {
+            if (animatedPositionTop.length) {
+                var scrollTop = $(window).scrollTop() + windowHeight;
 
-                };
-                viewport.bottom = viewport.top + windowHeight;
+                leftRang = animatedPositionTop[indexArr];
 
+                if (scrollTop >= leftRang) {
 
-
-                bounds.bottom = bounds.top + elOuterHeight ;
-
-               if(!(viewport.bottom < bounds.top || viewport.top > bounds.bottom)){
-                   animation();
-               }
-
-            });
-
-
-
-           // return (!(viewport.bottom < bounds.top || viewport.top > bounds.bottom));
-
-            var count = 0;
-            var animation = function () {
-                if(!count){
-                    setTimeout(function(){
+                    if (tmpIndex != indexArr) {
+                        tmpIndex = indexArr;
+                        var $el = $this.eq(indexArr);
                         $el.addClass('fadeInUp');
                         $el.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
                             $el.removeClass('fadeInUp');
                             $el.css('opacity', 1);
                         });
-                    }, 100);
-
-                    count++;
+                    }
+                    indexArr++
                 }
 
-            };
 
+            }
 
-           //    animation();
+        };
+
+        $(window).bind('scroll', function () {
+            animation(this);
 
         });
+
     };
 
     // ****** Parallax *******
@@ -659,7 +654,7 @@
                 })
             };
 
-            $(window).scroll(function () {
+            $(window).bind('scroll', function () {
                 transfor(this);
             });
 
@@ -682,7 +677,7 @@ $(document).ready(function () {
         autoplay: true
     });
 
-   // $('.animated').fadeInUp();
+    // $('.animated').fadeInUp();
 
     $('.show-more').on('click', function () {
         $(this).parent().find('.more').slideToggle();
