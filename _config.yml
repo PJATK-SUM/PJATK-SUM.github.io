@@ -29,21 +29,39 @@ i18n:
                 mobilne. Zdobywają informacje z zakresu: systemów operacyjnych oraz
                 architektur sprzętowych urządzeń mobilnych...
             more_info: Więcej informacji
-            security: Ochrona informacji
-            security_description: sieci ad-hoc; programowania rozproszonego;
+            mobile: Platformy mobilne
+            mobile_description: iOS, Android, Windows Phone
             languages: Języki programowania
-            languages_description: Java, C++ i Objective-C, a wkrótce także .NET
+            languages_description: Objective-C, Swift, Java, C#
         labs:
             title: OPIS LABORATORIUM
-            description_first: >
-                Laboratorium specjalizacji podlega nieustannemu rozwojowi finansowanemu
-                z prac badawczych, statutowych i funduszy uczelni. Przykładem tego
-                procesu jest pracownia 133 wyposażona w komputery Apple wspomagające
-                tworzenie oprogramowania w oparciu o język Objective-C.
-            description_second: >
-                Dzięki współpracy z firmami branży mobilnej portfolio urządzeń
-                mobilnych, dostępnych dla studentów, jest stale aktualizowane. Obecnie
-                można wymienić urządzenia:
+            description: >
+                Laboratorium specjalizacji podlega nieustannemu rozwojowi, aby
+                nadążać za dynamicznie zmieniającym się rynkiem urządzeń
+                mobilnych. Inwestycje w infrastrukturę laboratorium finansowane
+                są z grantów badawczych, funduszy statutowych oraz środków
+                własnych uczelni. Wsparcia udzielają też współpracujące ze
+                specjalizacją firmy z branży IT. Efektami tych starań są
+                pracownie:
+            list:
+                -
+                    title: 133
+                    description: >
+                        wyposażona w komputery iMac pozwalające tworzyć
+                        aplikacje dla platformy iOS w oparciu o języki Swift i
+                        ObjectiveC;
+                -
+                    title: 132
+                    description: >
+                        wyposażona w komputery z ekranami dotykowymi,
+                        pozwalające tworzyć aplikacje w architekturze Universal
+                        Windows Platform dla urządzeń IoT, Mobile, PC a nawet
+                        HoloLens;
+                -
+                    title: S-9
+                    description: >
+                        pole działań dla wszystkich projektów studenckich i
+                        naukowych jakie przychodzą do głowy naszym studentom
             devices_first:
                 - Nokia Lumia
                 - Samsung Galaxy

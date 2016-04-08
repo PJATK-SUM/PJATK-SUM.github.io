@@ -1,7 +1,7 @@
 $red: #E51A26;
 $white: #FFFFFF;
 $black: #36393C;
-$grey: #C2C2C2;
+$grey: #777;
 
 @mixin font-family {
   font-family: "Open Sans", sans-serif;
@@ -1067,4 +1067,3 @@ $button-transistion-duration: 0.3s; // The transition duration
     }
   }
 }
-
