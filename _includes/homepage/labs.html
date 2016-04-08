@@ -1,37 +1,32 @@
+{% assign i18n = site.i18n[page.language] %}
 <section id="labs">
     <div class="container">
-        <h2 class="animated">OPIS LABORATORIUM</h2>
+        <h2 class="animated">{{ i18n.labs.title }}</h2>
         <div class="row">
             <div class="col-6 animated">
-                <p>Laboratorium specjalizacji podlega nieustannemu rozwojowi finansowanemu z prac badawczych,
-                    statutowych i funduszy uczelni. Przykładem tego procesu jest pracownia 133 wyposażona w
-                    komputery Apple wspomagające tworzenie oprogramowania w oparciu o język ObjectiveC. </p>
-
-                <p>Dzięki współpracy z firmami branży mobilnej portfolio urządzeń mobilnych, dostępnych dla
-                    studentów, jest stale aktualizowane. Obecnie można wymienić urządzenia: </p>
+                <p>{{ i18n.labs.description_first }}</p>
+                <p>{{ i18n.labs.description_second }}</p>
             </div>
             <div class="col-6">
                 <div class="device">
                     <div class="row">
                         <div class="col-6">
                             <ul>
-                                <li>Nokia Lumia</li>
-                                <li>Samsung Galaxy</li>
-                                <li>Nexu</li>
+                              {% for device in i18n.labs.devices_first %}
+                                <li>{{ device }}</li>
+                              {% endfor %}
                             </ul>
                         </div>
                         <div class="col-6">
                             <ul>
-                                <li>Apple</li>
-                                <li>kostki Dice+</li>
-                                <li>Dell Venue 8</li>
+                              {% for device in i18n.labs.devices_second %}
+                                <li>{{ device }}</li>
+                              {% endfor %}
                             </ul>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
-
 </section>

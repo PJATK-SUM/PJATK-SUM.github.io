@@ -1,11 +1,97 @@
 # Site settings
 title: Sieci urządzeń mobilnych - PJATK
-description: > # this means to ignore newlines until "baseurl:"
-  Sieci urządzeń mobilnych to specjalizacja przy Polsko-Japońskiej Akademii
-  Technik Komputerowych. Studenci specjalizacji mają okazję poznać nowe
-  technologie w dziedzinie platform mobilnych - Android, iOS i Windows Phone.
-url: "http://PJATK-SUM.github.io"
+description: >
+    Sieci urządzeń mobilnych to specjalizacja przy Polsko-Japońskiej Akademii
+    Technik Komputerowych. Studenci specjalizacji mają okazję poznać nowe
+    technologie w dziedzinie platform mobilnych - Android, iOS i Windows Phone.
+url: "http://sum.pja.edu.pl"
 github_username: PJATK-SUM
 
 # Build settings
 markdown: kramdown
+
+i18n:
+    pl:
+        specialization: Sieci urządzeń <span>mobilnych</span>
+        school: Polsko-Japońska Akademia Technik Komputerowych
+        menu:
+            main: Strona główna
+            about: O nas
+            projects: Projekty studentów
+            movies: Filmy
+            contact: Kontakt
+        hero: Myśl globalnie, działaj lokalnie
+        about:
+            title: Tematyka Specjalizacji
+            description: >
+                W trakcie trzech semestrów nauki na specjalizacji, studenci otrzymują
+                praktyczną wiedzę dotyczącą tworzenia oprogramowania na platformy
+                mobilne. Zdobywają informacje z zakresu: systemów operacyjnych oraz
+                architektur sprzętowych urządzeń mobilnych...
+            more_info: Więcej informacji
+            security: Ochrona informacji
+            security_description: sieci ad-hoc; programowania rozproszonego;
+            languages: Języki programowania
+            languages_description: Java, C++ i Objective-C, a wkrótce także .NET
+        labs:
+            title: OPIS LABORATORIUM
+            description_first: >
+                Laboratorium specjalizacji podlega nieustannemu rozwojowi finansowanemu
+                z prac badawczych, statutowych i funduszy uczelni. Przykładem tego
+                procesu jest pracownia 133 wyposażona w komputery Apple wspomagające
+                tworzenie oprogramowania w oparciu o język Objective-C.
+            description_second: >
+                Dzięki współpracy z firmami branży mobilnej portfolio urządzeń
+                mobilnych, dostępnych dla studentów, jest stale aktualizowane. Obecnie
+                można wymienić urządzenia:
+            devices_first:
+                - Nokia Lumia
+                - Samsung Galaxy
+                - Nexus
+            devices_second:
+                - Apple
+                - kostki Dice+
+                - Dell Venue 8
+        projects:
+            title: Projekty studentów
+            list:
+                -
+                    name: PJATK Android
+                    image: /images/app-pjwstk-android.png
+                    href: https://play.google.com/store/apps/details?id=com.pjwstk.mobile.dziekanat
+                    link: play.google.com
+                -
+                    name: PJATK iOS
+                    image: /images/app-pjwstk-apple.png
+                    href: https://itunes.apple.com/pl/app/pjwstk/id828657671?mt=8
+                    link: itunes.apple.com
+        videos:
+            title: Filmy
+            list:
+                -
+                    link: https://www.youtube.com/watch?v=8zg7UOzygos
+                    title: That's how we learn with Tomaszew
+                -
+                    link: https://www.youtube.com/watch?v=ErD1yJtX_-8
+                    title: Halloween 2015
+                -
+                    link: https://www.youtube.com/watch?v=Tr4-Gr-jsRg
+                    title: 3DprinterBuild
+                -
+                    link: https://www.youtube.com/watch?v=8zg7UOzygos
+                    title: That's how we learn with Tomaszew
+                -
+                    link: https://www.youtube.com/watch?v=ErD1yJtX_-8
+                    title: Halloween 2015
+                -
+                    link: https://www.youtube.com/watch?v=Tr4-Gr-jsRg
+                    title: 3DprinterBuild
+        contact:
+            title: Kontakt
+            address: >
+                Polsko-Japońska Akademia
+                Technik Komputerowych<br>
+                ul. Koszykowa 86<br>
+                02-008 Warszawa
+            phone_title: Telefon
+            email_title: E-mail

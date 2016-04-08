@@ -1,31 +1,23 @@
-<!--========================================================
-                          HEADER
-=========================================================-->
+{% assign i18n = site.i18n[page.language] %}
 <header id="homepage">
     <img class="bg" src="images/page-1_slide04.jpg">
     <div class="container">
         <div class="page-title">
-
             <div class="logo"><img src="images/LOGO-PJWSTK.png" alt="logo"/></div>
             <div class="title">
-                <h1> Sieci urządzeń <span>mobilnych</span></h1>
-                <h3>Polsko-Japońska Akademia Technik Komputerowych</h3>
+                <h1>{{ i18n.specialization }}</h1>
+                <h3>{{ i18n.school }}</h3>
             </div>
-
         </div>
 
         <menu>
-            <menuitem><a href="#homepage">Strona główna</a></menuitem>
-            <menuitem><a href="#about">O nas</a></menuitem>
-            <menuitem><a href="#projects">Projekty studentów</a></menuitem>
-            <menuitem><a href="#videos">Filmy</a></menuitem>
-            <menuitem><a href="#contact">Kontakt</a></menuitem>
+            <menuitem><a href="#homepage">{{ i18n.menu.main }}</a></menuitem>
+            <menuitem><a href="#about">{{ i18n.menu.about }}</a></menuitem>
+            <menuitem><a href="#projects">{{ i18n.menu.projects }}</a></menuitem>
+            <menuitem><a href="#videos">{{ i18n.menu.movies }}</a></menuitem>
+            <menuitem><a href="#contact">{{ i18n.menu.contact }}</a></menuitem>
         </menu>
 
-        <h2>
-            Myśl globalnie, działaj lokalnie
-        </h2>
+        <h2>{{ i18n.hero }}</h2>
     </div>
-
-
 </header>

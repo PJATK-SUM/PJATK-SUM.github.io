@@ -1,20 +1,11 @@
+{% assign i18n = site.i18n[page.language] %}
 <section id="about">
     <div class="container">
-        <h2 class="animated">Tematyka Specjalizacji</h2>
-        <p class="animated">W trakcie trzech semestrów nauki na specjalizacji, studenci otrzymują praktyczną wiedzę dotyczącą
-            tworzenia
-            oprogramowania na platformy mobilne. Zdobywają informacje z zakresu: systemów operacyjnych oraz
-            architektur
-            sprzętowych urządzeń mobilnych...</p>
-
-        <p class="more">W trakcie trzech semestrów nauki na specjalizacji, studenci otrzymują praktyczną wiedzę dotyczącą
-            tworzenia
-            oprogramowania na platformy mobilne. Zdobywają informacje z zakresu: systemów operacyjnych oraz
-            architektur
-            sprzętowych urządzeń mobilnych...</p>
-
+        <h2 class="animated">{{ i18n.about.title }}</h2>
+        <p class="animated">{{ i18n.about.description }}</p>
+        <p class="more">{{ i18n.about.description }}</p>
         <button class="show-more">
-            <i class="fa fa-file-text"></i> Więcej informacji
+            <i class="fa fa-file-text"></i> {{ i18n.about.more_info }}
         </button>
     </div>
 </section>
@@ -26,8 +17,8 @@
                     <div class="icon">
                         <i class="fa fa-thumbs-o-up"></i>
                     </div>
-                    <h3 class="animated">Ochrona informacji</h3>
-                    <h5 class="animated">sieci ad-hoc; programowania rozproszonego;</h5>
+                    <h3 class="animated">{{ i18n.about.security }}</h3>
+                    <h5 class="animated">{{ i18n.about.security_description }}</h5>
                 </figure>
             </div>
             <div class="col-4">
@@ -35,8 +26,8 @@
                     <div class="icon">
                         <i class="fa fa-mobile"></i>
                     </div>
-                    <h3 class="animated">Ochrona informacji</h3>
-                    <h5 class="animated">Androidzie, Qt, Windows Phone.</h5>
+                    <h3 class="animated">{{ i18n.about.security }}</h3>
+                    <h5 class="animated">{{ i18n.about.security_description }}</h5>
                 </figure>
             </div>
             <div class="col-4">
@@ -44,8 +35,8 @@
                     <div class="icon">
                         <i class="fa fa-wrench"></i>
                     </div>
-                    <h3 class="animated">Języki programowania</h3>
-                    <h5 class="animated">Java, C++ i ObjectiveC, a wkrótce także .Net</h5>
+                    <h3 class="animated">{{ i18n.about.languages }}</h3>
+                    <h5 class="animated">{{ i18n.about.languages_description }}</h5>
                 </figure>
             </div>
         </div>

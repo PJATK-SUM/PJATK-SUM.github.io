@@ -1,44 +1,19 @@
+{% assign i18n = site.i18n[page.language] %}
 <section id="videos" class="parallax">
-
     <div class="container">
-        <h2>Filmy </h2>
+        <h2>{{ i18n.videos.title }}</h2>
 
         <div class="video">
             <div class="row">
+            {% for video in i18n.videos.list %}
                 <div class="col-4">
-                    <figure data-url="https://www.youtube.com/watch?v=8zg7UOzygos">
-                        <h3>That's how we learn with Tomaszew</h3>
+                    <figure data-url="{{ video.link }}">
+                        <h3>{{ video.title }}</h3>
                     </figure>
                 </div>
-                <div class="col-4">
-                    <figure data-url="https://www.youtube.com/watch?v=ErD1yJtX_-8">
-                        <h3>Halloween 2015</h3>
-                    </figure>
-                </div>
-                <div class="col-4">
-                    <figure data-url="https://www.youtube.com/watch?v=Tr4-Gr-jsRg">
-                        <h3>3DprinterBuild</h3>
-                    </figure>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-4">
-                    <figure data-url="https://www.youtube.com/watch?v=8zg7UOzygos">
-                        <h3>That's how we learn with Tomaszew</h3>
-                    </figure>
-                </div>
-                <div class="col-4">
-                    <figure data-url="https://www.youtube.com/watch?v=ErD1yJtX_-8">
-                        <h3>Halloween 2015</h3>
-                    </figure>
-                </div>
-                <div class="col-4">
-                    <figure data-url="https://www.youtube.com/watch?v=Tr4-Gr-jsRg">
-                        <h3>3DprinterBuild</h3>
-                    </figure>
-                </div>
+                {% cycle '', '', '</div><div class="row">' %}
+            {% endfor %}
             </div>
         </div>
-
     </div>
 </section>
