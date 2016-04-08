@@ -1,41 +1,35 @@
-<section class="well cntr" id="o-nas">
+{% assign i18n = site.i18n[page.language] %}
+<section id="about">
     <div class="container">
-        <h2 class="wow fadeInUp">Tematyka Specjalizacji</h2>
-
-        <p class="wow fadeInUp">
-            W trakcie trzech semestrów nauki na specjalizacji, studenci otrzymują praktyczną wiedzę dotyczącą
-            tworzenia oprogramowania na platformy mobilne. Zdobywają informacje z zakresu: systemów operacyjnych
-            oraz architektur sprzętowych urządzeń mobilnych...
-        </p>
-
-        <a  href="#" class="btn"><i class="fa-file-text"></i>Więcej informacji</a>
-
+        <h2 class="animated">{{ i18n.about.title }}</h2>
+        <p class="animated">{{ i18n.about.description }}</p>
+        <p class="more">{{ i18n.about.description }}</p>
+        <button class="show-more">
+            <i class="fa fa-file-text"></i> {{ i18n.about.more_info }}
+        </button>
     </div>
 </section>
-
-<section class="well2 cntr">
+<section>
     <div class="container">
         <div class="row">
-            <div class="col-md-4 col-sm-4 col-xs-12  wow fadeIn">
-                <div class="icon1 fa-thumbs-o-up"></div>
-                <h3>Ochrona informacji</h3>
-                <h5 class="color4"><a href="#">sieci
-                    ad-hoc; programowania rozproszonego; </a></h5>
+            <div class="col-6">
+                <figure>
+                    <div class="icon">
+                        <i class="fa fa-mobile"></i>
+                    </div>
+                    <h3 class="animated">{{ i18n.about.mobile }}</h3>
+                    <h5 class="animated">{{ i18n.about.mobile_description }}</h5>
+                </figure>
             </div>
-
-            <div class="col-md-4 col-sm-4 col-xs-12  wow fadeIn">
-                <div class="icon1 fa-mobile"></div>
-                <h3>Platfomy mobilne</h3>
-                <h5 class="color4"><a href="#">Androidzie, Qt, Windows Phone.</a></h5>
+            <div class="col-6">
+                <figure>
+                    <div class="icon">
+                        <i class="fa fa-wrench"></i>
+                    </div>
+                    <h3 class="animated">{{ i18n.about.languages }}</h3>
+                    <h5 class="animated">{{ i18n.about.languages_description }}</h5>
+                </figure>
             </div>
-
-            <div class="col-md-4 col-sm-4 col-xs-12  wow fadeIn">
-                <div class="icon1 fa-wrench"></div>
-                <h3>Języki programowania</h3>
-                <h5 class="color4"><a href="#">Java, C++ i ObjectiveC, a wkrótce także .Net</a></h5>
-            </div>
-
-
         </div>
     </div>
 </section>

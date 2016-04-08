@@ -1,39 +1,23 @@
-<!--========================================================
-                          HEADER
-=========================================================-->
-<header class="main_page">
-    <div id="stuck_container" class="stuck_container">
-        <div class="container">
-            <div class="brand">
-                <h1 class="brand_name">
-                    <a href="#home">Sieci urządzeń <span>mobilnych</span></a>
-                </h1>
-
-                <p class="brand_slogan">
-                    Polsko-Japońska Akademia Technik Komputerowych
-                </p>
+{% assign i18n = site.i18n[page.language] %}
+<header id="homepage">
+    <img class="bg" src="images/page-1_slide04.jpg">
+    <div class="container">
+        <div class="page-title">
+            <div class="logo"><img src="images/LOGO-PJWSTK.png" alt="logo"/></div>
+            <div class="title">
+                <h1>{{ i18n.specialization }}</h1>
+                <h3>{{ i18n.school }}</h3>
             </div>
-
-            <nav class="nav">
-                <ul class="sf-menu" data-type="navbar">
-                    <li class="active">
-                        <a href="#home">Strona główna</a>
-                    </li>
-                    <li>
-                        <a href="#o-nas">O nas</a>
-                    </li>
-
-                    <li>
-                        <a href="#projekty">Projekty studentów</a>
-                    </li>
-                    <li>
-                        <a href="#filmy">Filmy </a>
-                    </li>
-                    <li>
-                        <a href="#kontakt">Kontakt</a>
-                    </li>
-                </ul>
-            </nav>
         </div>
+
+        <menu>
+            <menuitem><a href="#homepage">{{ i18n.menu.main }}</a></menuitem>
+            <menuitem><a href="#about">{{ i18n.menu.about }}</a></menuitem>
+            <menuitem><a href="#projects">{{ i18n.menu.projects }}</a></menuitem>
+            <menuitem><a href="#videos">{{ i18n.menu.movies }}</a></menuitem>
+            <menuitem><a href="#contact">{{ i18n.menu.contact }}</a></menuitem>
+        </menu>
+
+        <h2>{{ i18n.hero }}</h2>
     </div>
 </header>
