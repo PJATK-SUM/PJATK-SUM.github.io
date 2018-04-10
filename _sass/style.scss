@@ -172,6 +172,13 @@ main {
       text-align: center;
       background: $white;
     }
+	
+	.container#collaboration {
+		margin-top: 5em;
+		img {
+			width: 80%;
+		}
+	}
 
     h2 {
       color: $black;
