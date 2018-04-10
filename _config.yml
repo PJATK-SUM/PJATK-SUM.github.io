@@ -32,7 +32,15 @@ i18n:
             mobile: Platformy mobilne
             mobile_description: iOS, Android, Windows Phone
             languages: Języki programowania
-            languages_description: Objective-C, Swift, Java, C#
+            languages_description: Objective-C, Swift, Java, Kotlin, C#, Python
+            collaboration:
+                title: Współpraca
+                description: >
+                    Nasze projekty nie mogły by istnieć bez odpowienich częsci i elementów.
+                    Dlatego w ramach koła naukowego naszej specjalizacji chetnie zawieramy
+                    współprace z różnymi dostawcami.
+                list:
+                    - <a href="https://botland.com.pl"><img src="https://botland.com.pl/img/logo_botland_kn.png" alt="Sklep dla robotyków i elektroników, Arduino, Raspberry Pi - BOTLAND"></a>
         labs:
             title: OPIS LABORATORIUM
             description: >
@@ -66,35 +74,52 @@ i18n:
                 - Nokia Lumia
                 - Samsung Galaxy
                 - Nexus
-            devices_second:
                 - Apple
+            devices_second:
                 - kostki Dice+
                 - Dell Venue 8
+                - Oculus Rift
+                - Raspberry Pi 3
+                - MS Kinect
+                - Hololens
+                
         projects:
             title: Projekty studentów
             list:
                 -
                     name: PJATK Android
-                    image: /images/app-pjwstk-android.png
+                    image: images/app-pjwstk-android.png
                     href: https://play.google.com/store/apps/details?id=com.pjwstk.mobile.dziekanat
                     link: play.google.com
                 -
                     name: PJATK iOS
-                    image: /images/app-pjwstk-apple.png
+                    image: images/app-pjwstk-apple.png
                     href: https://itunes.apple.com/pl/app/pjwstk/id828657671?mt=8
                     link: itunes.apple.com
         videos:
             title: Filmy
             list:
                 -
-                    link: https://www.youtube.com/watch?v=8zg7UOzygos
-                    title: That's how we learn with Tomaszew
+                    link: https://www.youtube.com/watch?v=PzFccmeBddE
+                    title: Andrii Kovalchuk „Buffer”
                 -
-                    link: https://www.youtube.com/watch?v=ErD1yJtX_-8
-                    title: Halloween 2015
+                    link: https://www.youtube.com/watch?v=B9eN_6UQotc
+                    title: Michał Gutowski "Smart Home"
                 -
-                    link: https://www.youtube.com/watch?v=Tr4-Gr-jsRg
-                    title: 3DprinterBuild
+                    link: https://www.youtube.com/watch?v=kITTL7_3pS8
+                    title: Kamil Kowalski "Wirtualny asystent studenta"
+                -
+                    link: https://www.youtube.com/watch?v=kITTL7_3pS8
+                    title: Kamil Kowalski "Wirtualny asystent studenta"
+                -
+                    link: https://www.youtube.com/watch?v=WEknAzWAxUY
+                    title: Kondrata Kielar "Dziekanat"
+                -
+                    link: https://www.youtube.com/watch?v=TKZ7I0vIaks
+                    title: Jakub Fryga o projekcie pomagającym wykryć chorobę Parkinsona
+                -
+                    link: https://www.youtube.com/watch?v=JghBwo_2V_s
+                    title: Mateusz Knop "Plan zajęć"
                 -
                     link: https://www.youtube.com/watch?v=8zg7UOzygos
                     title: That's how we learn with Tomaszew

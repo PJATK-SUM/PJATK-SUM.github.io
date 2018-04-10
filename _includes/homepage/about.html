@@ -32,4 +32,27 @@
             </div>
         </div>
     </div>
+	
+	<div class="container" id="collaboration">
+        <h2 class="animated">{{ i18n.about.collaboration.title }}</h2>
+        <div class="row">
+            <div class="col-12 animated">
+                <p>{{ i18n.about.collaboration.description }}</p>
+			</div>
+		</div>
+		<div class="row">
+			{% if i18n.about.collaboration.list.size == 1 %}
+				<div class="col-12">
+					{{ i18n.about.collaboration.list.first }}
+				</div>
+			{% else %}
+                {% for collaborator in i18n.about.collaboration.list %}
+					<div class="col-6">
+						{{ collaborator }}
+					</div>
+					{% cycle '', '</div><div class="row">' %}
+                {% endfor %}
+			{% endif %}
+        </div>
+    </div>
 </section>
