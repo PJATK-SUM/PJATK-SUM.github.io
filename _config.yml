@@ -30,7 +30,7 @@ i18n:
                 architektur sprzętowych urządzeń mobilnych...
             more_info: Więcej informacji
             mobile: Platformy mobilne
-            mobile_description: iOS, Android, Windows Phone
+            mobile_description: iOS, Android
             languages: Języki programowania
             languages_description: Objective-C, Swift, Java, Kotlin, C#, Python
             collaboration:
@@ -71,10 +71,9 @@ i18n:
                         pole działań dla wszystkich projektów studenckich i
                         naukowych jakie przychodzą do głowy naszym studentom
             devices_first:
-                - Nokia Lumia
                 - Samsung Galaxy
                 - Nexus
-                - Apple
+                - Apple iPhone, iPad
             devices_second:
                 - kostki Dice+
                 - Dell Venue 8
