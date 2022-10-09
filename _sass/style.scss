@@ -2,7 +2,6 @@ $red: #e51a26;
 $white: #ffffff;
 $black: #000000;
 $grey: #36393c;
-$logo: '/images/logo-pjatk.webp';
 
 @mixin font-family {
   font-family: "Open Sans", sans-serif;
@@ -39,7 +38,7 @@ body {
 }
 
 .logo {
-  background-image: url($logo);
+  background-image: var(--logo);
   background-size: contain;
 }
 
@@ -984,7 +983,7 @@ blockquote {
 
           &::before {
             content: '';
-            background-image: url($logo);
+            background-image: var(--logo);
             background-size: contain;
             background-repeat: no-repeat;
             width: 40px;

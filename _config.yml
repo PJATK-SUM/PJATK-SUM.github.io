@@ -1,11 +1,15 @@
 # Site settings
 title: Sieci urządzeń mobilnych - PJATK
+short_name: SUM - PJATK
 description: >
-    Sieci urządzeń mobilnych to specjalizacja przy Polsko-Japońskiej Akademii
-    Technik Komputerowych. Studenci specjalizacji mają okazję poznać nowe
-    technologie w dziedzinie platform mobilnych - Android, iOS i Windows Phone.
+  Sieci urządzeń mobilnych to specjalizacja przy Polsko-Japońskiej Akademii
+  Technik Komputerowych. Studenci specjalizacji mają okazję poznać nowe
+  technologie w dziedzinie platform mobilnych - Android, iOS i Windows Phone.
+theme_color: "#e51a26"
 url: "https://sum.pja.edu.pl"
+logo: "logo-pjatk.webp"
 github_username: PJATK-SUM
+
 exclude:
   - package*
   - webpack.config.js
@@ -13,133 +17,118 @@ exclude:
   - README.md
   - node_module
 
-
 # Build settings
 markdown: kramdown
 
 i18n:
-    pl:
-        specialization: Sieci urządzeń <span>mobilnych</span>
-        school: Polsko-Japońska Akademia Technik Komputerowych
-        menu:
-            main: Strona główna
-            about: O nas
-            projects: Projekty studentów
-            movies: Filmy
-            contact: Kontakt
-        hero: Myśl globalnie, działaj lokalnie
-        about:
-            title: Tematyka Specjalizacji
-            description: >
-                W trakcie trzech semestrów nauki na specjalizacji, studenci otrzymują
-                praktyczną wiedzę dotyczącą tworzenia oprogramowania na platformy
-                mobilne. Zdobywają informacje z zakresu: systemów operacyjnych oraz
-                architektur sprzętowych urządzeń mobilnych...
-            more_info: Więcej informacji
-            more_info_close: Zamknij
-            mobile: Platformy mobilne
-            mobile_description: iOS, Android
-            languages: Języki programowania
-            languages_description: Objective-C, Swift, Java, Kotlin, C#, Python
-            collaboration:
-                title: Współpraca
-                description: >
-                    Nasze projekty nie mogły by istnieć bez odpowienich częsci i elementów.
-                    Dlatego w ramach koła naukowego naszej specjalizacji chetnie zawieramy
-                    współprace z różnymi dostawcami.
-                list:
-                    - <a href="https://botland.com.pl" target="_blank"><img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="https://botland.com.pl/img/logo_botland_kn.png" alt="Sklep dla robotyków i elektroników, Arduino, Raspberry Pi - BOTLAND"/></a>
-        labs:
-            title: OPIS LABORATORIUM
-            description: >
-                Laboratorium specjalizacji podlega nieustannemu rozwojowi, aby
-                nadążać za dynamicznie zmieniającym się rynkiem urządzeń
-                mobilnych. Inwestycje w infrastrukturę laboratorium finansowane
-                są z grantów badawczych, funduszy statutowych oraz środków
-                własnych uczelni. Wsparcia udzielają też współpracujące ze
-                specjalizacją firmy z branży IT. Efektami tych starań są
-                pracownie:
-            list:
-                -
-                    title: 133
-                    description: >
-                        wyposażona w komputery iMac pozwalające tworzyć
-                        aplikacje dla platformy iOS w oparciu o języki Swift i
-                        ObjectiveC;
-                -
-                    title: 132
-                    description: >
-                        wyposażona w komputery z ekranami dotykowymi,
-                        pozwalające tworzyć aplikacje w architekturze Universal
-                        Windows Platform dla urządzeń IoT, Mobile, PC a nawet
-                        HoloLens;
-                -
-                    title: S-9
-                    description: >
-                        pole działań dla wszystkich projektów studenckich i
-                        naukowych jakie przychodzą do głowy naszym studentom
-            devices_first:
-                - Samsung Galaxy
-                - Nexus
-                - Apple iPhone, iPad
-            devices_second:
-                - kostki Dice+
-                - Dell Venue 8
-                - Oculus Rift
-                - Raspberry Pi 3
-                - MS Kinect
-                - Hololens
-                
-        projects:
-            title: Projekty studentów
-            list:
-                -
-                    name: PJATK Android
-                    image: images/app-pjwstk-android.webp
-                    href: https://play.google.com/store/apps/details?id=com.pjwstk.mobile.dziekanat
-                    link: play.google.com
-                -
-                    name: PJATK iOS
-                    image: images/app-pjwstk-apple.webp
-                    href: https://itunes.apple.com/pl/app/pjwstk/id828657671?mt=8
-                    link: itunes.apple.com
-        videos:
-            title: Filmy
-            list:
-                -
-                    link: https://www.youtube-nocookie.com/watch?v=PzFccmeBddE
-                    title: Andrii Kovalchuk „Buffer”
-                -
-                    link: https://www.youtube-nocookie.com/watch?v=B9eN_6UQotc
-                    title: Michał Gutowski "Smart Home"
-                -
-                    link: https://www.youtube-nocookie.com/watch?v=kITTL7_3pS8
-                    title: Kamil Kowalski "Wirtualny asystent studenta"
-                -
-                    link: https://www.youtube-nocookie.com/watch?v=WEknAzWAxUY
-                    title: Kondrata Kielar "Dziekanat"
-                -
-                    link: https://www.youtube-nocookie.com/watch?v=TKZ7I0vIaks
-                    title: Jakub Fryga o projekcie pomagającym wykryć chorobę Parkinsona
-                -
-                    link: https://www.youtube-nocookie.com/watch?v=JghBwo_2V_s
-                    title: Mateusz Knop "Plan zajęć"
-                -
-                    link: https://www.youtube-nocookie.com/watch?v=8zg7UOzygos
-                    title: That's how we learn with Tomaszew
-                -
-                    link: https://www.youtube-nocookie.com/watch?v=ErD1yJtX_-8
-                    title: Halloween 2015
-                -
-                    link: https://www.youtube-nocookie.com/watch?v=Tr4-Gr-jsRg
-                    title: 3DprinterBuild
-        contact:
-            title: Kontakt
-            address: >
-                Polsko-Japońska Akademia
-                Technik Komputerowych<br>
-                ul. Koszykowa 86<br>
-                02-008 Warszawa
-            phone_title: Telefon
-            email_title: E-mail
-            privacy: Polityka prywatności
+  pl:
+    specialization: Sieci urządzeń <span>mobilnych</span>
+    school: Polsko-Japońska Akademia Technik Komputerowych
+    menu:
+      main: Strona główna
+      about: O nas
+      projects: Projekty studentów
+      movies: Filmy
+      contact: Kontakt
+    hero: Myśl globalnie, działaj lokalnie
+    about:
+      title: Tematyka Specjalizacji
+      description: >
+        W trakcie trzech semestrów nauki na specjalizacji, studenci otrzymują
+        praktyczną wiedzę dotyczącą tworzenia oprogramowania na platformy
+        mobilne. Zdobywają informacje z zakresu: systemów operacyjnych oraz
+        architektur sprzętowych urządzeń mobilnych...
+      more_info: Więcej informacji
+      more_info_close: Zamknij
+      mobile: Platformy mobilne
+      mobile_description: iOS, Android
+      languages: Języki programowania
+      languages_description: Objective-C, Swift, Java, Kotlin, C#, Python
+      collaboration:
+        title: Współpraca
+        description: >
+          Nasze projekty nie mogły by istnieć bez odpowienich częsci i elementów.
+          Dlatego w ramach koła naukowego naszej specjalizacji chetnie zawieramy
+          współprace z różnymi dostawcami.
+        list:
+          - <a href="https://botland.com.pl" target="_blank"><img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="https://botland.com.pl/img/logo_botland_kn.png" alt="Sklep dla robotyków i elektroników, Arduino, Raspberry Pi - BOTLAND"/></a>
+    labs:
+      title: OPIS LABORATORIUM
+      description: >
+        Laboratorium specjalizacji podlega nieustannemu rozwojowi, aby
+        nadążać za dynamicznie zmieniającym się rynkiem urządzeń
+        mobilnych. Inwestycje w infrastrukturę laboratorium finansowane
+        są z grantów badawczych, funduszy statutowych oraz środków
+        własnych uczelni. Wsparcia udzielają też współpracujące ze
+        specjalizacją firmy z branży IT. Efektami tych starań są
+        pracownie:
+      list:
+        - title: 133
+          description: >
+            wyposażona w komputery iMac pozwalające tworzyć
+            aplikacje dla platformy iOS w oparciu o języki Swift i
+            ObjectiveC;
+        - title: 132
+          description: >
+            wyposażona w komputery z ekranami dotykowymi,
+            pozwalające tworzyć aplikacje w architekturze Universal
+            Windows Platform dla urządzeń IoT, Mobile, PC a nawet
+            HoloLens;
+        - title: S-9
+          description: >
+            pole działań dla wszystkich projektów studenckich i
+            naukowych jakie przychodzą do głowy naszym studentom
+      devices_first:
+        - Samsung Galaxy
+        - Nexus
+        - Apple iPhone, iPad
+      devices_second:
+        - kostki Dice+
+        - Dell Venue 8
+        - Oculus Rift
+        - Raspberry Pi 3
+        - MS Kinect
+        - Hololens
+
+    projects:
+      title: Projekty studentów
+      list:
+        - name: PJATK Android
+          image: images/app-pjwstk-android.webp
+          href: https://play.google.com/store/apps/details?id=com.pjwstk.mobile.dziekanat
+          link: play.google.com
+        - name: PJATK iOS
+          image: images/app-pjwstk-apple.webp
+          href: https://itunes.apple.com/pl/app/pjwstk/id828657671?mt=8
+          link: itunes.apple.com
+    videos:
+      title: Filmy
+      list:
+        - link: https://www.youtube-nocookie.com/watch?v=PzFccmeBddE
+          title: Andrii Kovalchuk „Buffer”
+        - link: https://www.youtube-nocookie.com/watch?v=B9eN_6UQotc
+          title: Michał Gutowski "Smart Home"
+        - link: https://www.youtube-nocookie.com/watch?v=kITTL7_3pS8
+          title: Kamil Kowalski "Wirtualny asystent studenta"
+        - link: https://www.youtube-nocookie.com/watch?v=WEknAzWAxUY
+          title: Kondrata Kielar "Dziekanat"
+        - link: https://www.youtube-nocookie.com/watch?v=TKZ7I0vIaks
+          title: Jakub Fryga o projekcie pomagającym wykryć chorobę Parkinsona
+        - link: https://www.youtube-nocookie.com/watch?v=JghBwo_2V_s
+          title: Mateusz Knop "Plan zajęć"
+        - link: https://www.youtube-nocookie.com/watch?v=8zg7UOzygos
+          title: That's how we learn with Tomaszew
+        - link: https://www.youtube-nocookie.com/watch?v=ErD1yJtX_-8
+          title: Halloween 2015
+        - link: https://www.youtube-nocookie.com/watch?v=Tr4-Gr-jsRg
+          title: 3DprinterBuild
+    contact:
+      title: Kontakt
+      address: >
+        Polsko-Japońska Akademia
+        Technik Komputerowych<br>
+        ul. Koszykowa 86<br>
+        02-008 Warszawa
+      phone_title: Telefon
+      email_title: E-mail
+      privacy: Polityka prywatności

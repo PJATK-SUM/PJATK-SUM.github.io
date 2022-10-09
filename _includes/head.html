@@ -6,7 +6,9 @@
     <meta name="description" content="{{ site.description }}">
 
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="preload" href="/images/logo-pjatk.webp" as="image">
+    {% include _pwa.html %}
+
+    <link rel="preload" href="/images/{{ site.logo }}" as="image">
     <link rel="dns-prefetch" href="https://fonts.googleapis.com/" />
     <link rel="dns-prefetch" href="https://maxcdn.bootstrapcdn.com/" />
 
@@ -17,11 +19,14 @@
     <link rel="preload"
         href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" as="style"
         onload="this.rel='stylesheet'">
-        
+
+       
+
     {% capture inline_css %}
-    {% include inline.scss %}
+        {% include inline.scss %}
     {% endcapture %}
     <style>
+        :root{--logo: url(/images/{{ site.logo }})}
         {{inline_css | scssify}}
     </style>
 
