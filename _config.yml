@@ -4,8 +4,15 @@ description: >
     Sieci urządzeń mobilnych to specjalizacja przy Polsko-Japońskiej Akademii
     Technik Komputerowych. Studenci specjalizacji mają okazję poznać nowe
     technologie w dziedzinie platform mobilnych - Android, iOS i Windows Phone.
-url: "http://sum.pja.edu.pl"
+url: "https://sum.pja.edu.pl"
 github_username: PJATK-SUM
+exclude:
+  - package*
+  - webpack.config.js
+  - Gemfile
+  - README.md
+  - node_module
+
 
 # Build settings
 markdown: kramdown
@@ -29,6 +36,7 @@ i18n:
                 mobilne. Zdobywają informacje z zakresu: systemów operacyjnych oraz
                 architektur sprzętowych urządzeń mobilnych...
             more_info: Więcej informacji
+            more_info_close: Zamknij
             mobile: Platformy mobilne
             mobile_description: iOS, Android
             languages: Języki programowania
@@ -40,7 +48,7 @@ i18n:
                     Dlatego w ramach koła naukowego naszej specjalizacji chetnie zawieramy
                     współprace z różnymi dostawcami.
                 list:
-                    - <a href="https://botland.com.pl"><img src="https://botland.com.pl/img/logo_botland_kn.png" alt="Sklep dla robotyków i elektroników, Arduino, Raspberry Pi - BOTLAND"></a>
+                    - <a href="https://botland.com.pl" target="_blank"><img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="https://botland.com.pl/img/logo_botland_kn.png" alt="Sklep dla robotyków i elektroników, Arduino, Raspberry Pi - BOTLAND"/></a>
         labs:
             title: OPIS LABORATORIUM
             description: >
@@ -87,46 +95,43 @@ i18n:
             list:
                 -
                     name: PJATK Android
-                    image: images/app-pjwstk-android.png
+                    image: images/app-pjwstk-android.webp
                     href: https://play.google.com/store/apps/details?id=com.pjwstk.mobile.dziekanat
                     link: play.google.com
                 -
                     name: PJATK iOS
-                    image: images/app-pjwstk-apple.png
+                    image: images/app-pjwstk-apple.webp
                     href: https://itunes.apple.com/pl/app/pjwstk/id828657671?mt=8
                     link: itunes.apple.com
         videos:
             title: Filmy
             list:
                 -
-                    link: https://www.youtube.com/watch?v=PzFccmeBddE
+                    link: https://www.youtube-nocookie.com/watch?v=PzFccmeBddE
                     title: Andrii Kovalchuk „Buffer”
                 -
-                    link: https://www.youtube.com/watch?v=B9eN_6UQotc
+                    link: https://www.youtube-nocookie.com/watch?v=B9eN_6UQotc
                     title: Michał Gutowski "Smart Home"
                 -
-                    link: https://www.youtube.com/watch?v=kITTL7_3pS8
+                    link: https://www.youtube-nocookie.com/watch?v=kITTL7_3pS8
                     title: Kamil Kowalski "Wirtualny asystent studenta"
                 -
-                    link: https://www.youtube.com/watch?v=kITTL7_3pS8
-                    title: Kamil Kowalski "Wirtualny asystent studenta"
-                -
-                    link: https://www.youtube.com/watch?v=WEknAzWAxUY
+                    link: https://www.youtube-nocookie.com/watch?v=WEknAzWAxUY
                     title: Kondrata Kielar "Dziekanat"
                 -
-                    link: https://www.youtube.com/watch?v=TKZ7I0vIaks
+                    link: https://www.youtube-nocookie.com/watch?v=TKZ7I0vIaks
                     title: Jakub Fryga o projekcie pomagającym wykryć chorobę Parkinsona
                 -
-                    link: https://www.youtube.com/watch?v=JghBwo_2V_s
+                    link: https://www.youtube-nocookie.com/watch?v=JghBwo_2V_s
                     title: Mateusz Knop "Plan zajęć"
                 -
-                    link: https://www.youtube.com/watch?v=8zg7UOzygos
+                    link: https://www.youtube-nocookie.com/watch?v=8zg7UOzygos
                     title: That's how we learn with Tomaszew
                 -
-                    link: https://www.youtube.com/watch?v=ErD1yJtX_-8
+                    link: https://www.youtube-nocookie.com/watch?v=ErD1yJtX_-8
                     title: Halloween 2015
                 -
-                    link: https://www.youtube.com/watch?v=Tr4-Gr-jsRg
+                    link: https://www.youtube-nocookie.com/watch?v=Tr4-Gr-jsRg
                     title: 3DprinterBuild
         contact:
             title: Kontakt

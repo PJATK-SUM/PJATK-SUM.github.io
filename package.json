@@ -1,0 +1,28 @@
+{
+  "name": "pjatk-sum.github.io",
+  "version": "1.0.0",
+  "description": "[Strona internetowa specjalizacji Sieci Urządzeń Mobilnych](http://pjatk-sum.github.io/) zawiera podstawowe informacje o naszej specializacji - czym się zajmujemy, jakich technologii się uczymy, jakimi urządzeniami dysponujemy, itd.",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "build": "NODE_ENV=production webpack --config webpack.config.js",
+    "watch": "webpack --config webpack.config.js --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PJATK-SUM/PJATK-SUM.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PJATK-SUM/PJATK-SUM.github.io/issues"
+  },
+  "homepage": "https://github.com/PJATK-SUM/PJATK-SUM.github.io#readme",
+  "devDependencies": {
+    "terser-webpack-plugin": "^5.3.6",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  }
+}

@@ -6,11 +6,26 @@
     <meta name="description" content="{{ site.description }}">
 
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="preload" href="/images/logo-pjatk.webp" as="image">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com/" />
+    <link rel="dns-prefetch" href="https://maxcdn.bootstrapcdn.com/" />
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=latin&display=swap" as="style"
+        onload="this.rel='stylesheet'">
 
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="preload"
+        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" as="style"
+        onload="this.rel='stylesheet'">
+        
+    {% capture inline_css %}
+    {% include inline.scss %}
+    {% endcapture %}
+    <style>
+        {{inline_css | scssify}}
+    </style>
+
+
 
     <!--[if lt IE 9]>
     <html class="lt-ie9">
