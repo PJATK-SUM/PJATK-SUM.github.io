@@ -2,7 +2,7 @@
 layout: compress
 ---
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="{{ page.language }}">
   {% include head.html %}
   <body>
     <div class="page">
@@ -14,6 +14,6 @@ layout: compress
             integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" 
             crossorigin="anonymous"></script>
 
-    <script src="js/main.min.js?{{ site.time | date: '%Y%H%I%M%S' }}"></script>
+    <script src="/js/main.min.js?{{ site.time | date: '%Y%H%I%M%S' }}"></script>
   </body>
 </html>

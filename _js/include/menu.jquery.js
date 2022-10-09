@@ -19,17 +19,19 @@
                 elHeight = $el.outerHeight(),
                 $rwdMenu = $('<div class="' + options.classNameRwd + '"></div>'),
                 $item = $el.find("menuitem"),
-                $itemLink = $item.find("a"),
+                $languageSelector = $el.find('.language-selector').clone(),
+                $itemLink = $item.find("> a"),
                 isMobile = false,
                 $title = $("<h1></h1>");
 
-            $title.text($("title").text());
+            $title.text($("#homepage .title h1").text());
             $rwdMenu.append($title);
+            $rwdMenu.append($languageSelector)
             $rwdMenu.append(
                 '<button class="menu-hamburger" aria-label="menu"><div class="bar"></div><div class="bar"></div><div class="bar"></div></button>'
             );
 
-            var $button = $rwdMenu.find("button");
+            var $button = $rwdMenu.find("button.menu-hamburger");
 
             var scrollMenuCount = false;
 
