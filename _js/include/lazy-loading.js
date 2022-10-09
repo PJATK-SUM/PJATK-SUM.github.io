@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+    
     const getAllLazyImages = () =>
         [].slice.call(document.querySelectorAll("img.lazy"));
     const setDefaultLazyImageParams = (lazyImage) => {

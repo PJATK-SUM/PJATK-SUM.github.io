@@ -1,5 +1,6 @@
 // ****** Video Youtube *******
 (function ($) {
+    
     $.fn.video = function (options) {
         options = $.extend(
             {

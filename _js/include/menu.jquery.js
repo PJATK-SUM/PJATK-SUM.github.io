@@ -2,7 +2,7 @@
 // ******  Menu ********
 
 (function ($) {
-    "use strict";
+    
 
     $.fn.menu = function (options) {
         options = $.extend(

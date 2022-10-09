@@ -6,8 +6,9 @@
     "doc": "docs"
   },
   "scripts": {
-    "build": "NODE_ENV=production webpack --config webpack.config.js",
-    "watch": "webpack --config webpack.config.js --watch"
+    "dev": "webpack --config webpack.config.js --watch",
+    "lint": "eslint _js/**",
+    "build": "NODE_ENV=production webpack --config webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,7 @@
   },
   "homepage": "https://github.com/PJATK-SUM/PJATK-SUM.github.io#readme",
   "devDependencies": {
+    "eslint": "^8.25.0",
     "favicons-webpack-plugin": "^6.0.0-alpha.1",
     "html-webpack-plugin": "^5.5.0",
     "terser-webpack-plugin": "^5.3.6",

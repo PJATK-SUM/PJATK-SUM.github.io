@@ -1,5 +1,5 @@
 (function ($) {
-    "use strict";
+    
 
     // Passive event listeners
     $.event.special.touchstart = {

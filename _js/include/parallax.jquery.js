@@ -1,7 +1,7 @@
 // ****** Parallax *******
 
 (function ($) {
-    "use strict";
+    
     $.fn.parallax = function () {
         this.each(function () {
             var $el = $(this);

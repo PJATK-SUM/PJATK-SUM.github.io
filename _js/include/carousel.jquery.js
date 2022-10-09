@@ -1,6 +1,6 @@
 // ****** Carousel *******
 (function ($) {
-    "use strict";
+    
     $.fn.carousel = function (options) {
         options = $.extend(
             {
