@@ -1,5 +1,8 @@
+---
+layout: compress
+---
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="{{ page.language }}">
   {% include head.html %}
   <body>
     <div class="page">
@@ -7,8 +10,12 @@
       {{ content }}
       {% include footer.html %}
     </div>
-    <script src="https://code.jquery.com/jquery-2.2.2.min.js"
-            integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI=" crossorigin="anonymous"></script>
-    <script src="js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js" 
+            integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" 
+            crossorigin="anonymous"></script>
+    <script>
+      var baseUrl = '{{ site.baseurl }}';
+    </script>
+    <script src="{{ site.url }}{{ site.baseurl }}/js/bundle.min.js?{{ site.time | date: '%Y%H%I%M%S' }}"></script>
   </body>
 </html>

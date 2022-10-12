@@ -1,19 +1,23 @@
 {% assign i18n = site.i18n[page.language] %}
+{% assign url = site.url + site.baseurl %}
 <section id="projects">
     <div class="container">
         <div class="icon"><i class="fa fa-users"></i></div>
         <h2>{{ i18n.projects.title }}</h2>
 
         <div class="carousel">
-            <button class="next"><i class="fa fa-chevron-right"></i></button>
-            <button class="prev"><i class="fa fa-chevron-left"></i></button>
+            <button class="next" aria-label="next"><i class="fa fa-chevron-right"></i></button>
+            <button class="prev" aria-label="prev"><i class="fa fa-chevron-left"></i></button>
             {% for project in i18n.projects.list %}
             <div class="carousel-cell">
                 <blockquote>
-                    <h5>{{ project.name }}</h5>
-                    <p><img src="{{ project.image }}"/></p>
+                    <h3>{{ project.name }}</h3>
+                    <p><img class="lazy" 
+                            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" 
+                            data-src="{{ url }}/{{ project.image }}" alt="{{ project.name }}" loading="lazy">
+                        </p>
                     <cite>
-                      <a href="{{ project.href }}">{{ project.link }}</a>
+                      <a href="{{ project.href }}" target="_blank">{{ project.link }}</a>
                     </cite>
                 </blockquote>
             </div>

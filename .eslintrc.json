@@ -1,7 +1,12 @@
 {
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
   "env": {
     "browser": true,
-    "jquery": true
+    "jquery": true,
+    "es6": true
   },
   "rules": {
     "comma-dangle": 1,
