@@ -34,9 +34,6 @@ $(document).ready(function () {
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
         navigator.serviceWorker.register(baseUrl + '/service-worker.js', {
-    
-        }).then(registration => {
-            console.log('SW registered: ', registration);
         }).catch(registrationError => {
             console.error('SW registration failed: ', registrationError);
         });

@@ -3,7 +3,6 @@
 
 (function ($) {
     
-
     $.fn.menu = function (options) {
         options = $.extend(
             {
@@ -21,9 +20,10 @@
                 $item = $el.find("menuitem"),
                 $languageSelector = $el.find('.language-selector').clone(),
                 $itemLink = $item.find("> a"),
-                isMobile = false,
                 $homePageLink = $('<a></a>'),
                 $title = $('<h1></h1>');
+
+            let isMobile = false;
 
             $homePageLink.attr('href', '#homepage');
             $homePageLink.text($("#homepage .title h1").text())
@@ -36,7 +36,7 @@
 
             const $button = $rwdMenu.find("button.menu-hamburger");
 
-            const scrollMenuCount = false;
+            let scrollMenuCount = false;
 
             const addScrollMenu = function () {
                 if (!scrollMenuCount) {
@@ -70,7 +70,7 @@
             const setActive = function () {
                 const url = window.location.hash;
                 $itemLink.removeClass("active");
-                var $a = null;
+                let $a = null;
 
                 if (url === "") {
                     $a = $itemLink.first().addClass("active");
@@ -89,13 +89,13 @@
                 setActivePosition($a.offset().top);
             };
 
-            var leftRang = 0,
+            let leftRang = 0,
                 rightRang = 0,
                 indexArr = 0,
                 tmpTop = 0,
                 tmpIndex = -1;
 
-            var setActivePosition = function (position) {
+            const setActivePosition = function (position) {
                 if (arrElementTop.length > 1) {
                     leftRang = arrElementTop[indexArr];
                     if (indexArr < arrElementTop.length - 1) {
@@ -122,15 +122,15 @@
                 }
             };
 
-            var closeRwdMenu = function () {
+            const closeRwdMenu = function () {
                 if ($button.hasClass("is-active")) {
                     $el.css("margin-right", "");
                     $button.removeClass("is-active");
                 }
             };
 
-            var init = function () {
-                var windowWidth = $(window).width();
+            const init = function () {
+                let windowWidth = $(window).width();
 
                 setActive();
 
