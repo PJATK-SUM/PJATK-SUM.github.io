@@ -7,8 +7,9 @@
   },
   "scripts": {
     "dev": "webpack --config webpack.config.js --watch",
-    "lint": "eslint _js/**",
-    "build": "NODE_ENV=production webpack --config webpack.config.js"
+    "lint": "eslint _javascript/**",
+    "lint:fix": "eslint _javascript/** --fix",
+    "build": "eslint _javascript/** && NODE_ENV=production webpack --config webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,7 @@
     "eslint": "^8.25.0",
     "favicons-webpack-plugin": "^6.0.0-alpha.1",
     "html-webpack-plugin": "^5.5.0",
+    "remove-files-webpack-plugin": "^1.5.0",
     "terser-webpack-plugin": "^5.3.6",
     "webpack": "^5.74.0",
     "webpack-cli": "^4.10.0",

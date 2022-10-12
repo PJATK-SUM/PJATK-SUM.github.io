@@ -1,6 +1,5 @@
 // ****** Video Youtube *******
 (function ($) {
-    
     $.fn.video = function (options) {
         options = $.extend(
             {
@@ -10,7 +9,7 @@
         );
 
         this.each(function () {
-            var $el = $(this),
+            const $el = $(this),
                 $video = $el.find("figure"),
                 $body = $("body"),
                 $button = $("<button></button>"),
@@ -29,7 +28,7 @@
             $video.prepend($button);
 
             $video.each(function () {
-                var $vi = $(this),
+                const $vi = $(this),
                     url = $vi.data("url"),
                     id = url.split("?v=")[1],
                     text = $vi.text().trim().replaceAll('"', ""),
@@ -46,6 +45,13 @@
                     .attr("height", 0)
                     .addClass("lazy");
 
+                $img.on("lazy-onload", (e) => {
+                    $(e.target)
+                        .parent()
+                        .width(e.target.getAttribute("width"))
+                        .height(e.target.getAttribute("height"));
+                });
+
                 $vi.data("id", id);
                 $vi.find("button").attr("aria-label", text);
                 $vi.find(".image-wrapper").prepend($img);
@@ -55,7 +61,7 @@
                 });
             });
 
-            var resizeWindow = function () {
+            const resizeWindow = () => {
                 if ($lightBoxCon.length) {
                     $lightBoxCon.css(
                         "margin-top",
@@ -64,8 +70,8 @@
                 }
             };
 
-            var showLightBox = function (object) {
-                var id = $(object).parent().data("id");
+            const showLightBox = (object) => {
+                const id = $(object).parent().data("id");
 
                 $lightBoxCon.append(loadVideo(id));
                 $lightBox.append($lightBoxCon);
@@ -79,24 +85,18 @@
                 });
             };
 
-            var hideLightBox = function () {
+            const hideLightBox = () => {
                 $lightBoxCon.find("iframe").remove();
                 $lightBox.remove();
                 $body.css("overflow", "");
             };
 
-            var loadVideo = function (id) {
-                var autoplay = "";
-                if (options.autoplay) autoplay = "?autoplay=1";
-                return (
-                    '<iframe src="https://www.youtube-nocookie.com/embed/' +
-          id +
-          autoplay +
-          '" frameborder="0" allowfullscreen loading="lazy">></iframe>'
-                );
-            };
+            const loadVideo = (id) =>
+                `<iframe src="https://www.youtube-nocookie.com/embed/${id}${
+                    options.autoplay ? "?autoplay=1" : ""
+                }" frameborder="0" allowfullscreen loading="lazy">></iframe>`;
 
-            $(window).resize(function () {
+            $(window).resize(() => {
                 resizeWindow();
             });
         });

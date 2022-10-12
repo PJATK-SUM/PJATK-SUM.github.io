@@ -13,7 +13,9 @@ layout: compress
     <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js" 
             integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" 
             crossorigin="anonymous"></script>
-
-    <script src="/js/main.min.js?{{ site.time | date: '%Y%H%I%M%S' }}"></script>
+    <script>
+      var baseUrl = '{{ site.baseurl }}';
+    </script>
+    <script src="{{ site.url }}{{ site.baseurl }}/js/bundle.min.js?{{ site.time | date: '%Y%H%I%M%S' }}"></script>
   </body>
 </html>

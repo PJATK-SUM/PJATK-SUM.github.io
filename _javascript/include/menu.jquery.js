@@ -14,7 +14,7 @@
         );
 
         this.each(function () {
-            var $el = $(this),
+            const $el = $(this),
                 elTop = $el.offset().top,
                 elHeight = $el.outerHeight(),
                 $rwdMenu = $('<div class="' + options.classNameRwd + '"></div>'),
@@ -22,20 +22,23 @@
                 $languageSelector = $el.find('.language-selector').clone(),
                 $itemLink = $item.find("> a"),
                 isMobile = false,
-                $title = $("<h1></h1>");
+                $homePageLink = $('<a></a>'),
+                $title = $('<h1></h1>');
 
-            $title.text($("#homepage .title h1").text());
+            $homePageLink.attr('href', '#homepage');
+            $homePageLink.text($("#homepage .title h1").text())
+            $title.append($homePageLink);
             $rwdMenu.append($title);
             $rwdMenu.append($languageSelector)
             $rwdMenu.append(
                 '<button class="menu-hamburger" aria-label="menu"><div class="bar"></div><div class="bar"></div><div class="bar"></div></button>'
             );
 
-            var $button = $rwdMenu.find("button.menu-hamburger");
+            const $button = $rwdMenu.find("button.menu-hamburger");
 
-            var scrollMenuCount = false;
+            const scrollMenuCount = false;
 
-            var addScrollMenu = function () {
+            const addScrollMenu = function () {
                 if (!scrollMenuCount) {
                     if (!$el.hasClass(options.classNameFixed)) {
                         $el.next().css("margin-top", elHeight + "px");
@@ -48,7 +51,7 @@
                 }
             };
 
-            var removeScrollMenu = function () {
+            const removeScrollMenu = function () {
                 if (scrollMenuCount) {
                     if ($el.hasClass(options.classNameFixed)) {
                         $el.removeClass(options.classNameFixed);
@@ -63,9 +66,9 @@
                 $(this).addClass("active");
             });
 
-            var arrElementTop = [];
-            var setActive = function () {
-                var url = window.location.hash;
+            const arrElementTop = [];
+            const setActive = function () {
+                const url = window.location.hash;
                 $itemLink.removeClass("active");
                 var $a = null;
 

@@ -34,6 +34,11 @@ document.addEventListener("DOMContentLoaded", function () {
                             lazyImage.classList.remove("lazy");
                             lazyImage.width = this.width;
                             lazyImage.height = this.height;
+
+                            const event = document.createEvent("HTMLEvents");
+                            event.initEvent("lazy-onload", true, true);
+                            event.eventName = "lazy-onload";
+                            lazyImage.dispatchEvent(event);
                         };
   
                         image.src = lazyImage.dataset.src;
@@ -51,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
   
                 active = false;
-            }, 100);
+            }, 0);
         }
     };
   

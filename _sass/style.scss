@@ -17,7 +17,6 @@ $grey: #36393c;
   transition: $what $speed ease-in-out;
 }
 
-
 * {
   padding: 0;
   margin: 0;
@@ -29,6 +28,8 @@ body {
   background: $white;
   width: 100%;
   height: 100%;
+  color: $black;
+  overscroll-behavior-y: contain;
 }
 
 .container {
@@ -40,6 +41,11 @@ body {
 .logo {
   background-image: var(--logo);
   background-size: contain;
+  background-repeat: no-repeat;
+
+  &.white {
+    background-image: var(--logo-white);
+  }
 }
 
 header {
@@ -56,6 +62,8 @@ header {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    background-color: $grey;
+    filter: brightness(0.7);
   }
 
   .page-title {
@@ -106,11 +114,12 @@ header {
   }
 
   menu {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 3em auto;
     top: -10em;
     @include transitionElement(0.5s, top);
-
 
     .language-selector {
       display: inline-block;
@@ -125,18 +134,33 @@ header {
         border: $red 2px solid;
         padding: 0.5em 1em;
         border-radius: 0.5em;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .flag {
+        width: 20px;
+        height: 15px;
+        margin-right: 5px;
+        border: 1px solid #0000001f;
+        &.lazy{
+          visibility: hidden;
+        }
       }
 
       .dropdown-menu {
         visibility: hidden;
         position: absolute;
         background-color: $white;
-        padding: .5em;
-        width: 100%;
+        padding: 0.5em;
         border-radius: 0.5em;
+        width: calc(100% + 20px);
+        left: -10px;
         opacity: 0;
         font-weight: bold;
-        font-size: 0.875em;
+        font-size: 1em;
         box-shadow: 0px 2px 3px 3px #00000030;
 
         @include transition(0.3s);
@@ -144,6 +168,17 @@ header {
         a {
           color: $black;
           text-decoration: none;
+          font-weight: 600;
+          width: 100%;
+          display: block;
+          text-transform: uppercase;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          &:hover {
+            color: $red;
+          }
         }
       }
 
@@ -151,11 +186,10 @@ header {
         visibility: visible;
         opacity: 1;
       }
-
     }
 
     menuitem {
-      margin-right: 1.75em;
+      margin: 0 0.825em;
 
       a {
         color: $white;
@@ -181,9 +215,29 @@ header {
       background: $black;
       z-index: 999999;
       margin: 0;
-      padding: 1em;
-    }
+      padding: 0.5em 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
+      menuitem:first-child {
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          &:before {
+            content: '';
+            background-image: var(--logo-white);
+            background-size: contain;
+            height: 50px;
+            width: 50px;
+            margin-right: 1em;
+            display: inline-block;
+          }
+        }
+      }
+    }
   }
 
   h2 {
@@ -249,7 +303,7 @@ main {
       overflow: hidden;
       line-height: 0;
       color: transparent;
-      @include transition(.3s);
+      @include transition(0.3s);
 
       &.expand {
         line-height: 1.5;
@@ -269,7 +323,7 @@ main {
       margin-top: 2em;
       @include font-family;
       font-size: 1.25em;
-      font-weight: 300;
+      font-weight: 400;
       text-align: center;
       color: $white;
       padding: 1em 1.313em;
@@ -342,7 +396,7 @@ main {
     }
 
     h3 {
-      font-size: 3.125em;
+      font-size: 3em;
       line-height: 1;
       font-weight: 300;
       color: $black;
@@ -365,17 +419,18 @@ main {
       color: $white;
       font-size: 3em;
       font-weight: 100;
+      margin-bottom: 0.3em;
     }
 
     address {
       font-size: 1.25em;
       line-height: 1.25em;
-      font-weight: 100;
+      font-weight: 400;
       font-style: normal;
     }
 
     dl {
-      margin: 2em 0;
+      margin: 1em 0;
       color: $white;
       font-size: 1.4em;
       text-transform: lowercase;
@@ -392,7 +447,6 @@ main {
 
       dt {
         float: left;
-        margin-right: 1em;
         text-align: center;
       }
     }
@@ -415,6 +469,9 @@ main {
         width: 7.375em;
         height: 7.375em;
         margin: 0 auto;
+        background-color: $white;
+        border-radius: 50%;
+        border: 0.4em solid $white;
 
         img {
           width: 100%;
@@ -436,7 +493,7 @@ main {
         .subtitle {
           color: $white;
           font-size: 0.825em;
-          font-weight: 100;
+          font-weight: 400;
           text-align: center;
           text-transform: uppercase;
           margin-top: 0;
@@ -582,6 +639,7 @@ blockquote {
   }
 }
 
+
 .video {
   figure {
     text-align: center;
@@ -664,7 +722,7 @@ blockquote {
     max-height: 500px;
     top: 50%;
     width: 100%;
-    height: 100%;
+    height: calc(100% - 20px);
     background: $white;
     border: 1em solid $white;
     border-radius: 0.5em;
@@ -680,7 +738,7 @@ blockquote {
       background: $black;
       border: 0.2em solid $white;
       border-radius: 50%;
-      padding: 0.2em 0.5em 0.18em 0.5em;
+      padding: 0.2em 0.4em 0.18em 0.4em;
       webkit-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
       cursor: pointer;
@@ -838,20 +896,41 @@ blockquote {
   }
 }
 
+.typewrite .wrap {
+  animation: blinkTextCursor 500ms steps(44) infinite normal;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+}
 
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+
+  to {
+    border-right-color: transparent;
+  }
+}
 
 // Tablets and Mobile
 
 @media (max-width: 992px) {
   header {
-    min-height: 100%;
+    min-height: 100vh;
 
     .background {
-      height: 100%;
+      height: 100vh;
+    }
+
+
+    menu {
+      menuitem {
+        margin: 0 0.625em;
+      }
     }
 
     .page-title {
       display: block;
+
       .logo {
         float: none;
         margin: 0 auto;
@@ -875,8 +954,11 @@ blockquote {
 
     h2 {
       margin: 0;
+      font-size: 3.375em;
     }
   }
+
+
 
   .video {
     figure {
@@ -891,9 +973,15 @@ blockquote {
 
 @media (max-width: 762px) {
   header {
-    img.bg {
-      height: 100%;
-      object-fit: fill;
+    padding-top: 5em;
+    min-height: auto;
+    padding-bottom: 0;
+
+    img.background {
+      height: 100vh;
+      object-fit: cover;
+      object-position: 100%;
+      filter: brightness(0.5);
     }
 
     .page-title {
@@ -901,6 +989,7 @@ blockquote {
         h1 {
           line-height: 1;
           margin-bottom: 0.15em;
+          margin-top: 15px;
         }
       }
     }
@@ -908,17 +997,18 @@ blockquote {
     menu {
       position: fixed;
       top: 0;
-      right: 0;
+      right: -1px;
       padding: 0.5em;
       margin: 0;
       height: 100%;
       width: 60%;
-      margin-top: 3em;
+      margin-top: 3.525em;
       margin-right: -70%;
       background: $white;
       box-sizing: content-box;
       box-shadow: -10px 0 5px 0 rgba(0, 0, 0, 0.1);
       z-index: 9999999;
+      display: block;
       @include transitionElement(0.3s, margin-right);
 
       &.active {
@@ -935,7 +1025,7 @@ blockquote {
         text-align: left;
         top: 0;
         left: 0;
-        height: 2.5em;
+        height: 2.825em;
         background: $white;
         width: 100%;
         box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
@@ -943,27 +1033,28 @@ blockquote {
         display: flex;
         align-items: center;
 
-        .language-selector{
-          margin-top: -2px;
-        
-          button{
+        .language-selector {
+          margin-right: 10px;
+
+          button {
             color: $black;
             border: 1px solid $red;
-            padding: .5em .4em;
+            padding: 0.5em 0.3em;
           }
-          .dropdown-menu{
-            padding: .5em 0;
+
+          .dropdown-menu {
+            padding: 0.5em 0;
             line-height: 1;
             text-align: center;
-            a{
-              font-size: 0.825em;
+
+            a {
+              font-size: 0.9em;
             }
           }
         }
 
         button:not(.dropdown) {
-          margin-top: 5px;
-
+        
           &.menu-hamburger {
             height: 40px;
             width: 40px;
@@ -1043,23 +1134,30 @@ blockquote {
           @include font-family;
           font-size: 0.8em;
           float: left;
-          font-weight: 100;
-          width: calc(100% - 94px);
+          font-weight: 600;
+          width: calc(100% - 100px);
           padding-left: 0.3em;
           display: flex;
           overflow: hidden;
           white-space: nowrap;
+          a {
+            color: $black;
+            text-decoration: none;
+            display: flex;
 
-          &::before {
-            content: '';
-            background-image: var(--logo);
-            background-size: contain;
-            background-repeat: no-repeat;
-            width: 40px;
-            height: 40px;
-            display: block;
-            margin: 5px 5px 0 0;
+            &::before {
+              content: "";
+              background-image: var(--logo);
+              background-size: contain;
+              background-repeat: no-repeat;
+              background-position: center;
+              width: 40px;
+              height: 40px;
+              display: block;
+              margin: 5px 5px 0 0;
+            }
           }
+         
         }
       }
 
@@ -1072,32 +1170,46 @@ blockquote {
         a {
           color: $black;
           text-transform: none;
-          padding: 0.6em;
+          padding: 0 0.6em;
           text-decoration: none;
           font-size: 0.875em;
           font-weight: 600;
           letter-spacing: 0.1em;
+          display: flex;
+          align-items: center;
+
           @include transition(0.3s);
+
+          &::before {
+            content: "\f054";
+            font-weight: 400;
+            font-size: 0.675em;
+            margin-right: 1em;
+            font-family: "FontAwesome";
+            color: $red;
+          }
 
           &:hover {
             color: $red;
           }
         }
 
-        .language-selector{
+        .language-selector {
           display: none;
         }
       }
     }
 
     h2 {
-      display: none;
+     font-size: 2em;
+     margin: 40px 0 40px 0;
+     min-height: 70px;
     }
   }
 
   .container {
     width: 100%;
-    padding: 0.5em;
+    padding: 0.5em 0.825em;
     margin: 0;
   }
 
@@ -1134,12 +1246,20 @@ blockquote {
           margin-top: 1em;
           font-size: 1.37em;
         }
+
+        .icon{
+          font-size: 6.25em;
+        }
       }
 
       .social {
         float: none;
       }
     }
+  }
+
+  .device .col-6{
+    padding: 0 0.8em;
   }
 
   .video {
@@ -1155,10 +1275,38 @@ blockquote {
       padding: 0;
     }
   }
+
+  .light-box {
+    .light-box-con {
+      border-width: 0.5em;
+
+      .light-box-close {
+        margin-right: -0.725em;
+      }
+    }
+  }
+
 }
 
-@media (max-width: 340px) {
- 
+@media (max-width: 360px) {
+  header {
+    
+    menu {
+      .rwd-menu {
+        h1 {
+          width: calc(100% - 95px);
+
+          &::before {
+            margin-right: 1px;
+          }
+        }
+
+        .language-selector {
+          margin: 0 0 0 5px;
+        }
+      }
+    }
+  }
 
   main {
     section#contact {
@@ -1169,6 +1317,4 @@ blockquote {
       }
     }
   }
-
-
 }

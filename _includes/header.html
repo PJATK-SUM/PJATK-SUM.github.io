@@ -1,11 +1,17 @@
 {% assign i18n = site.i18n[page.language] %}
+{% assign url = site.url + site.baseurl %}
 <header id="homepage">
-    <img class="background" src="/images/background-300w.webp"
-        srcset="/images/background-300w.webp 300w, /images/background-400w.webp 400w, /images/background-600w.webp 600w, /images/background-1756w.webp 1756w"
+    <img class="background" src="{{ url }}/images/background-300w.webp"
+         srcset="
+        {{ url }}/images/background-300w.webp 300w, 
+        {{ url }}/images/background-400w.webp 400w, 
+        {{ url }}/images/background-600w.webp 600w, 
+        {{ url }}/images/background-1756w.webp 1756w"
         sizes="100vw" alt="background" />
+        
     <div class="container">
         <div class="page-title">
-            <div class="logo"></div>
+            <div class="logo white"></div>
             <div class="title">
                 <h1>{{ i18n.specialization }}</h1>
                 <p class="subtitle">{{ i18n.school }}</h3>
@@ -21,20 +27,21 @@
             <menuitem>
             <div class="language-selector">
                 <button class="dropdown" type="button">
-                    {{ site.languages[page.language].title }}
+                    <img class="flag lazy" sr data-src="{{ url }}/images/{{ page.language }}.svg" alt="{{ page.language }}"/>  {{ page.language }}
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     {% for lang in site.languages %}
                         {% if lang[0] != page.language %}
-                            <a class="dropdown-item" href="{{ lang[1].path }}">{{ lang[1].title }}</a>
+                            <a class="dropdown-item" href="{{ lang[1].path }}">
+                                <img class="flag lazy" data-src="{{ url }}/images/{{ lang[0] }}.svg" alt="{{ lang[0] }}"/> {{ lang[0] }}</a>
                         {% endif %}
                     {% endfor %}
-
                 </div>
             </div>
             </menuitem>
         </menu>
 
-        <h2>{{ i18n.hero }}</h2>
+
+        <h2 class="typewrite" data-period="4000" data-type='[ "{{ i18n.hero }}", "{{ i18n.specialization }}" ]'>{{ i18n.hero }}</h2>
     </div>
 </header>
